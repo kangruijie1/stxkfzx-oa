@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xyz.stxkfzx.manager.face.mapper.SignItemMapper">
+	<insert id="insertSignItem">
+		insert into signitem
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="uid != 0">
+				uid,
+			</if>
+			<if test="signin != null">
+				signin,
+			</if>
+			<if test="signout != null">
+				signout,
+			</if>
+			<if test="signin_img != null">
+				signin_img,
+			</if>
+			<if test="signout_img != null">
+				signout_img,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="uid != null">
+				#{uid},
+			</if>
+			<if test="signin != null">
+				#{signin},
+			</if>
+			<if test="signout != null">
+				#{signout},
+			</if>
+			<if test="signin_img != null">
+				#{signin_img},
+			</if>
+			<if test="signout_img != null">
+				#{signout_img},
+			</if>
+		</trim>
+	</insert>
+		
+	<select id="selSignItem" resultType="xyz.stxkfzx.manager.user.pojo.TSignItem">
+		SELECT id, uid, signin, signout FROM signitem 
+		<where>
+			<if test="uid != 0">
+				uid = #{uid}
+			</if>
+		</where>
+		and
+		UNIX_TIMESTAMP(signin) &gt;=
+		UNIX_TIMESTAMP(#{startTime})
+		AND
+		UNIX_TIMESTAMP(signin) &lt;= UNIX_TIMESTAMP(#{endTime})
+		ORDER BY ID ASC
+	</select>
+
+	<update id="updateSignItem">
+		update signitem
+		set signout = #{item.signout},
+		signout_img = #{item.signout_img}
+		where uid = #{item.uid}
+		and
+		UNIX_TIMESTAMP(signin) &gt;= UNIX_TIMESTAMP(#{todayStart})
+		AND
+		UNIX_TIMESTAMP(signin) &lt;= UNIX_TIMESTAMP(#{todayEnd})
+		ORDER BY id DESC LIMIT 1;
+	</update>
+	
+	<delete id="deleteSignout">
+		update signitem set signout=NULL,signout_img=NULL where id=#{xxx}
+	</delete>
+</mapper>
