@@ -8,9 +8,9 @@ import java.util.*;
 import java.util.Date;
 
 import org.springframework.scheduling.annotation.*;
-import xyz.stxkfzx.manager.user.mapper.UserMapper;
 import xyz.stxkfzx.manager.user.pojo.TSignItem;
 import xyz.stxkfzx.manager.user.pojo.TUser;
+import xyz.stxkfzx.manager.user.service.UserService;
 
 @Component
 public class TimerSignout
@@ -18,7 +18,7 @@ public class TimerSignout
     @Autowired
     private SignItemMapper signItemMapper;
     @Autowired
-    private UserMapper userMapper;
+    private UserService userService;
     
     @Scheduled(cron = "0 50 22 * * ?")
     public void test2() {
@@ -28,7 +28,7 @@ public class TimerSignout
         final String todayStart = String.valueOf(today) + " 00:00:00.000";
         final String todayEnd = String.valueOf(today) + " 23:59:59.999";
         final TUser userTemp = new TUser();
-        final List<TUser> userList = this.userMapper.selectUser(userTemp);
+        List<TUser> userList = userService.getAllTUser();
         for (final TUser user : userList) {
             final int id = user.getId();
             final List<TSignItem> signItemList = this.signItemMapper.selSignItem(id, todayStart, todayEnd);

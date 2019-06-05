@@ -2,14 +2,8 @@ package xyz.stxkfzx.manager.face.service.impl;
 
 import xyz.stxkfzx.manager.face.service.*;
 import org.springframework.stereotype.*;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.beans.factory.annotation.*;
 
 import xyz.stxkfzx.manager.face.constant.SignContants;
-import xyz.stxkfzx.manager.face.mapper.*;
-import xyz.stxkfzx.manager.face.utils.*;
-import xyz.stxkfzx.manager.face.pojo.*;
-import java.util.*;
 
 @Service
 public class JudgeServiceImpl implements JudgeService{

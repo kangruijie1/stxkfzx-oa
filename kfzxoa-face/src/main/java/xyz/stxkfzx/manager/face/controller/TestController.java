@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.*;
 import org.springframework.web.bind.annotation.*;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 
-@Controller
+@RestController
 public class TestController {
 	@Autowired
 	private FaceService faceService;
@@ -19,14 +19,12 @@ public class TestController {
 	private SelService selService;
 
 	@RequestMapping({ "/test" })
-	@ResponseBody
 	public void test() throws InterruptedException, UnsupportedEncodingException {
 		List<TUser> batchAddFace = faceService.batchAddFace("F:\\0802");
 		System.out.println(batchAddFace.toString());
 	}
 
 	@RequestMapping({ "/sel/groupUsers" })
-	@ResponseBody
 	public void groupUsers(String group_id) throws InterruptedException {
 		selService.groupUsers(group_id);
 	}

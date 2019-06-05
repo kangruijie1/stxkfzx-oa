@@ -8,7 +8,7 @@ import java.util.List;
 @Component
 public interface UserMapper
 {
-    void insertUser(TUser tUser);
+    int insertUser(TUser tUser);
     
     List<TUser> selectUser(TUser tUser);
     

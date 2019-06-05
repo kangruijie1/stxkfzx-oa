@@ -1,6 +1,7 @@
-package xyz.stxkfzx.manager.face.pojo;
+package xyz.stxkfzx.manager.common.pojo;
 
-import xyz.stxkfzx.manager.face.constant.SignContants;
+
+import xyz.stxkfzx.manager.common.contants.SignContants;
 
 public class FaceResult {
 	

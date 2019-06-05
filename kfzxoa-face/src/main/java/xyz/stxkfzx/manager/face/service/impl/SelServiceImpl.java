@@ -10,23 +10,23 @@ import java.text.*;
 import xyz.stxkfzx.manager.face.faceDbOperation.*;
 import java.util.*;
 import xyz.stxkfzx.manager.face.pojo.*;
-import xyz.stxkfzx.manager.user.mapper.UserMapper;
 import xyz.stxkfzx.manager.user.pojo.TSignItem;
 import xyz.stxkfzx.manager.user.pojo.TUser;
+import xyz.stxkfzx.manager.user.service.UserService;
 
 @Service
 public class SelServiceImpl implements SelService {
 	@Autowired
 	private SignItemMapper signItemMapper;
 	@Autowired
-	private UserMapper userMapper;
+	private UserService userService;
 
 	@Override
 	public List<SignItemResult> selDepartmentSignItem(int week, String group_id) throws ParseException {
 		List<SignItemResult> signItemResultList = new ArrayList<SignItemResult>();
 		TUser userTemp = new TUser();
 		userTemp.setGroup_id(group_id);
-		List<TUser> userList = userMapper.selectUser(userTemp);
+		List<TUser> userList = userService.getTUsersByGroupId(group_id);
 		for (TUser user : userList) {
 			SignItemResult itemResult = new SignItemResult();
 			itemResult.setUser_info(user.getUser_info());
@@ -117,7 +117,7 @@ public class SelServiceImpl implements SelService {
 			user.setGroup_id(group_id);
 			user.setUser_id(user_id);
 			user.setUser_info(user_info);
-			this.userMapper.insertUser(user);
+			int i = userService.addTuser(user);
 		}
 	}
 

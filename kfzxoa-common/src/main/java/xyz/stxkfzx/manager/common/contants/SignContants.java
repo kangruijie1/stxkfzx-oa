@@ -1,4 +1,4 @@
-package xyz.stxkfzx.manager.face.constant;
+package xyz.stxkfzx.manager.common.contants;
 
 public class SignContants {
 	/**

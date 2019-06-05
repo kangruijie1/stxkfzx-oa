@@ -4,7 +4,6 @@ import java.util.*;
 
 import com.besjon.pojo.User_list;
 
-import xyz.stxkfzx.manager.face.pojo.*;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 
 import java.io.*;

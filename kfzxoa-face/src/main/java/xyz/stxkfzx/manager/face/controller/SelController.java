@@ -1,6 +1,5 @@
 package xyz.stxkfzx.manager.face.controller;
 
-import org.springframework.stereotype.*;
 import xyz.stxkfzx.manager.face.service.*;
 import org.springframework.beans.factory.annotation.*;
 import xyz.stxkfzx.manager.face.utils.*;
@@ -9,13 +8,12 @@ import xyz.stxkfzx.manager.face.pojo.*;
 import java.text.*;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 public class SelController {
 	@Autowired
 	private SelService selService;
 
 	@RequestMapping({ "/sel/group" })
-	@ResponseBody
 	public FaceResult selGroupUsers(int week, String group_id) throws ParseException {
 		Map<String, Object> resultData = new HashMap<String, Object>();
 		if (week == 0) {

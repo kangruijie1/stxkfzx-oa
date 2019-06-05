@@ -12,26 +12,23 @@ import xyz.stxkfzx.manager.face.constant.SignContants;
 import xyz.stxkfzx.manager.face.pojo.FaceResult;
 import xyz.stxkfzx.manager.face.service.FaceService;
 import xyz.stxkfzx.manager.face.service.ManagerService;
-import xyz.stxkfzx.manager.user.mapper.UserMapper;
 import xyz.stxkfzx.manager.user.pojo.TUser;
+import xyz.stxkfzx.manager.user.service.UserService;
 
 @Service
 public class ManagerServiceImpl implements ManagerService {
 
 	@Autowired
-	private UserMapper userMapper;
+	private UserService userService;
 	@Autowired
 	private FaceService faceService;
 	
 	@Override
 	public FaceResult mustSign(String user_info) {
-		TUser tUser = new TUser();
-		tUser.setUser_info(user_info);
-		List<TUser> selectUser = userMapper.selectUser(tUser);
-		if(selectUser.size() == 0 || selectUser == null) {
+		TUser tUser = userService.getTUserByUserInfo(user_info);
+		if(tUser == null) {
 			return new FaceResult(SignContants.FAIL, "请输入正确的用户名！");
 		}
-		tUser = selectUser.get(0);
 		List<User_list> user_list = new ArrayList<User_list>();
 		User_list user = new User_list();
 		user.setGroup_id(tUser.getGroup_id());

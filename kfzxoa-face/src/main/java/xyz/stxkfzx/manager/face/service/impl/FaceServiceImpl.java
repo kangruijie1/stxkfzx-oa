@@ -15,16 +15,16 @@ import xyz.stxkfzx.manager.face.utils.*;
 import xyz.stxkfzx.manager.face.constant.SignContants;
 import xyz.stxkfzx.manager.face.faceDbOperation.*;
 import xyz.stxkfzx.manager.face.pojo.*;
-import xyz.stxkfzx.manager.user.mapper.UserMapper;
 import xyz.stxkfzx.manager.user.pojo.TSignItem;
 import xyz.stxkfzx.manager.user.pojo.TUser;
+import xyz.stxkfzx.manager.user.service.UserService;
 
 import java.io.*;
 
 @Service
 public class FaceServiceImpl implements FaceService {
 	@Autowired
-	private UserMapper userMapper;
+	private UserService userService;
 	@Autowired
 	private SignItemMapper signItemMapper;
 
@@ -80,9 +80,7 @@ public class FaceServiceImpl implements FaceService {
 				else {
 					// 获取此用户名查询出用户id
 					String user_info = faceUser.getUser_info();
-					TUser user = new TUser();
-					user.setUser_info(user_info);
-					user = this.userMapper.selectUser(user).get(0);
+					TUser user = userService.getTUserByUserInfo(user_info);
 					int id = user.getId();
 					// 查该用户今天打卡记录
 					List<TSignItem> signItems = signItemMapper.selSignItem(id, todayStart, todayEnd);
@@ -149,7 +147,7 @@ public class FaceServiceImpl implements FaceService {
 				user.setUser_id(user_id);
 				user.setUser_info(user_info);
 				if ("0".equals(faceAddResult.getError_code())) {
-					this.userMapper.insertUser(user);
+					userService.addTuser(user)
 					System.out.println(
 							"-" + group_id + "-" + user_id + "-" + user_info + "\u6dfb\u52a0\u6210\u529f\uff01");
 				}
