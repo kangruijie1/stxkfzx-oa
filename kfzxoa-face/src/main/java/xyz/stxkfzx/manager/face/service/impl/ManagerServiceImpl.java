@@ -3,13 +3,12 @@ package xyz.stxkfzx.manager.face.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.besjon.pojo.AiFaceUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.besjon.pojo.User_list;
-
-import xyz.stxkfzx.manager.face.constant.SignContants;
-import xyz.stxkfzx.manager.face.pojo.FaceResult;
+import xyz.stxkfzx.manager.common.contants.SignContants;
+import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.face.service.FaceService;
 import xyz.stxkfzx.manager.face.service.ManagerService;
 import xyz.stxkfzx.manager.user.pojo.TUser;
@@ -29,14 +28,14 @@ public class ManagerServiceImpl implements ManagerService {
 		if(tUser == null) {
 			return new FaceResult(SignContants.FAIL, "请输入正确的用户名！");
 		}
-		List<User_list> user_list = new ArrayList<User_list>();
-		User_list user = new User_list();
-		user.setGroup_id(tUser.getGroup_id());
-		user.setUser_id(tUser.getUser_id());
-		user.setUser_info(tUser.getUser_info());
+		List<AiFaceUser> aiFaceUserList = new ArrayList<AiFaceUser>();
+		AiFaceUser user = new AiFaceUser();
+		user.setGroup_id(tUser.getDepartmentId());
+		user.setUser_id(tUser.getJobId());
+		user.setUser_info(tUser.getUsername());
 		user.setScore(90);
-		user_list.add(user);
-		FaceResult faceResult = faceService.sign(user_list, null);
+		aiFaceUserList.add(user);
+		FaceResult faceResult = faceService.sign(aiFaceUserList, null);
 		return faceResult;
 	}
 

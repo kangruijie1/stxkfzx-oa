@@ -44,8 +44,8 @@ public class FaceAdd
                 String user_info = imageFile.getName();
                 user_info = user_info.substring(0, user_info.lastIndexOf("."));
                 for (final TUser user : jsonToList) {
-                    if (user_info.equals(user.getUser_info())) {
-                        final String user_id = user.getUser_id();
+                    if (user_info.equals(user.getUsername())) {
+                        final String user_id = user.getJobId();
                         final String imgBase64 = Base64Util.getImgBase64(imageFile.getPath());
                         System.out.println("-" + group_id + "-" + user_id + "-" + user_info);
                         final FaceAddResult add = add(imgBase64, group_id, user_id, user_info);

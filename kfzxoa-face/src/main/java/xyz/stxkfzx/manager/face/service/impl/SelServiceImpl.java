@@ -25,17 +25,17 @@ public class SelServiceImpl implements SelService {
 	public List<SignItemResult> selDepartmentSignItem(int week, String group_id) throws ParseException {
 		List<SignItemResult> signItemResultList = new ArrayList<SignItemResult>();
 		TUser userTemp = new TUser();
-		userTemp.setGroup_id(group_id);
+		userTemp.setDepartmentId(group_id);
 		List<TUser> userList = userService.getTUsersByGroupId(group_id);
 		for (TUser user : userList) {
 			SignItemResult itemResult = new SignItemResult();
-			itemResult.setUser_info(user.getUser_info());
+			itemResult.setUser_info(user.getUsername());
 			// 获取此周的起始和结束日期
 			List<String> weekStartEndDate = (List<String>) GetWeek.getWeekStartEndDate(week);
 			String todayStart = String.valueOf(weekStartEndDate.get(0)) + " 00:00:00.000";
 			String todayEnd = String.valueOf(weekStartEndDate.get(1)) + " 23:59:59.999";
 			// 查询该用户本周的签到记录
-			int id = user.getId();
+			int id = user.getUserId();
 			List<TSignItem> signItems = this.signItemMapper.selSignItem(id, todayStart, todayEnd);
 			Map<String, Object> weekMap = new HashMap<String, Object>();
 			for (int i = 1; i < 8; ++i) {
@@ -94,10 +94,10 @@ public class SelServiceImpl implements SelService {
 			for (int i = 1; i <= user_count; ++i) {
 				Thread.sleep(500L);
 				FaceUserResultUserList faceUserResultUserList = FaceUserInfo.get(group_id2, Integer.toString(i));
-				user.setUser_id(Integer.toString(i));
+				user.setJobId(Integer.toString(i));
 				String user_info = faceUserResultUserList.getResult().getUser_list().get(0).getUser_info();
-				user.setGroup_id(group_id2);
-				user.setUser_info(user_info);
+				user.setDepartmentId(group_id2);
+				user.setUsername(user_info);
 				userList.add(user);
 				System.out.println(user);
 			}
@@ -114,9 +114,9 @@ public class SelServiceImpl implements SelService {
 			Thread.sleep(500L);
 			FaceUserResultUserList faceUserResultUserList = FaceUserInfo.get(group_id, user_id);
 			String user_info = faceUserResultUserList.getResult().getUser_list().get(0).getUser_info();
-			user.setGroup_id(group_id);
-			user.setUser_id(user_id);
-			user.setUser_info(user_info);
+			user.setDepartmentId(group_id);
+			user.setJobId(user_id);
+			user.setUsername(user_info);
 			int i = userService.addTuser(user);
 		}
 	}
@@ -140,10 +140,10 @@ public class SelServiceImpl implements SelService {
 				e.printStackTrace();
 			}
 			FaceUserResultUserList faceUserResultUserList = FaceUserInfo.get(group_id, Integer.toString(i));
-			user.setUser_id(Integer.toString(i));
+			user.setJobId(Integer.toString(i));
 			String user_info = faceUserResultUserList.getResult().getUser_list().get(0).getUser_info();
-			user.setGroup_id(group_id);
-			user.setUser_info(user_info);
+			user.setDepartmentId(group_id);
+			user.setUsername(user_info);
 			userList.add(user);
 		}
 		for (TUser user : userList) {

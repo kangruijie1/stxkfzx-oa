@@ -1,12 +1,12 @@
 package xyz.stxkfzx.manager.face.controller;
 
+import com.besjon.pojo.AiFaceUser;
+import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.face.service.*;
 import org.springframework.beans.factory.annotation.*;
 import java.util.*;
 import java.io.*;
 import org.springframework.web.bind.annotation.*;
-
-import com.besjon.pojo.User_list;
 
 import xyz.stxkfzx.manager.user.pojo.TUser;
 
@@ -21,7 +21,7 @@ public class FaceController {
 	public FaceResult searchMulti(String imgBase64)
 			throws UnsupportedEncodingException, FileNotFoundException {
 		imgBase64 = imgBase64.substring(imgBase64.indexOf(44) + 1);
-		List<User_list> userList = faceService.searchMulti(imgBase64);
+		List<AiFaceUser> userList = faceService.searchMulti(imgBase64);
 		FaceResult result = faceService.sign(userList, imgBase64);
 		System.out.println(result.toString());
 		return result;

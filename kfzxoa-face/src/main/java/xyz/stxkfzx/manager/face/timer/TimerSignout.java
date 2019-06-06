@@ -30,7 +30,7 @@ public class TimerSignout
         final TUser userTemp = new TUser();
         List<TUser> userList = userService.getAllTUser();
         for (final TUser user : userList) {
-            final int id = user.getId();
+            final int id = user.getUserId();
             final List<TSignItem> signItemList = this.signItemMapper.selSignItem(id, todayStart, todayEnd);
             if (signItemList != null) {
                 if (signItemList.size() == 0) {

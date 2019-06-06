@@ -1,9 +1,10 @@
 package xyz.stxkfzx.manager.face.service.impl;
 
+import xyz.stxkfzx.manager.common.contants.SignContants;
+import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.face.service.*;
 import org.springframework.stereotype.*;
 
-import xyz.stxkfzx.manager.face.constant.SignContants;
 
 @Service
 public class JudgeServiceImpl implements JudgeService{

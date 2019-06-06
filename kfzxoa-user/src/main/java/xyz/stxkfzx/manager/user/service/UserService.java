@@ -13,13 +13,6 @@ public interface UserService {
     List<TUser> getTUsersByGroupId(String group_id);
 
     /**
-     * 添加用户
-     * @param user 用户对象
-     * @return 新增用户的主键
-     */
-    int addTuser(TUser user);
-
-    /**
      * 获取所有用户
      * @return 用户List
      */
@@ -31,4 +24,18 @@ public interface UserService {
      * @return 该用户
      */
     TUser getTUserByUserInfo(String user_info);
+
+    /**
+     * 添加用户
+     * @param user 用户对象
+     * @return 新增用户的主键
+     */
+    TUser addUser(TUser user);
+
+    /**
+     * 判断注册的用户名是否重复
+     * @param username 用户名
+     * @return 是或否
+     */
+    Boolean checkUsernameIsRepeat(String username);
 }

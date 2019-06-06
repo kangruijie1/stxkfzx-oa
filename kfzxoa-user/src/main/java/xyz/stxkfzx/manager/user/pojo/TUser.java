@@ -1,55 +1,95 @@
 package xyz.stxkfzx.manager.user.pojo;
 
-public class TUser
-{
-    private int id;
-    private String group_id;
-    private String user_id;
-    private String user_info;
-    
-    public int getId() {
-        return this.id;
-    }
-    
-    public void setId(final int id) {
-        this.id = id;
-    }
-    
-    public String getGroup_id() {
-        return this.group_id;
-    }
-    
-    public void setGroup_id(final String group_id) {
-        this.group_id = group_id;
-    }
-    
-    public String getUser_id() {
-        return this.user_id;
-    }
-    
-    public void setUser_id(final String user_id) {
-        this.user_id = user_id;
-    }
-    
-    public String getUser_info() {
-        return this.user_info;
-    }
-    
-    public void setUser_info(final String user_info) {
-        this.user_info = user_info;
-    }
-    
-    public TUser(final int id, final String group_id, final String user_id, final String user_info) {
-        this.id = id;
-        this.group_id = group_id;
-        this.user_id = user_id;
-        this.user_info = user_info;
-    }
-    
+import java.util.Date;
+
+public class TUser {
+    private Integer userId;
+    private String departmentId;
+    private String jobId;
+    private String username;
+    private String password;
+    private String phoneNum;
+    private Date createTime;
+    private Date updateTime;
+
     public TUser() {
     }
-    
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public String getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
+    }
+
+    public String getJobId() {
+        return jobId;
+    }
+
+    public void setJobId(String jobId) {
+        this.jobId = jobId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPhoneNum() {
+        return phoneNum;
+    }
+
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    @Override
     public String toString() {
-        return "User [id=" + this.id + ", group_id=" + this.group_id + ", user_id=" + this.user_id + ", user_info=" + this.user_info + "]";
+        return "TUser{" +
+                "userId=" + userId +
+                ", departmentId='" + departmentId + '\'' +
+                ", jobId='" + jobId + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", phoneNum='" + phoneNum + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
     }
 }

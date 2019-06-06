@@ -40,7 +40,7 @@
 	</insert>
 		
 	<select id="selSignItem" resultType="xyz.stxkfzx.manager.user.pojo.TSignItem">
-		SELECT id, uid, signin, signout FROM signitem 
+		SELECT userId, uid, signin, signout FROM signitem
 		<where>
 			<if test="uid != 0">
 				uid = #{uid}
@@ -63,10 +63,10 @@
 		UNIX_TIMESTAMP(signin) &gt;= UNIX_TIMESTAMP(#{todayStart})
 		AND
 		UNIX_TIMESTAMP(signin) &lt;= UNIX_TIMESTAMP(#{todayEnd})
-		ORDER BY id DESC LIMIT 1;
+		ORDER BY userId DESC LIMIT 1;
 	</update>
 	
 	<delete id="deleteSignout">
-		update signitem set signout=NULL,signout_img=NULL where id=#{xxx}
+		update signitem set signout=NULL,signout_img=NULL where userId=#{xxx}
 	</delete>
 </mapper>
