@@ -11,8 +11,17 @@ public class TUser {
     private String phoneNum;
     private Date createTime;
     private Date updateTime;
+    private short status;
 
     public TUser() {
+    }
+
+    public short getStatus() {
+        return status;
+    }
+
+    public void setStatus(short status) {
+        this.status = status;
     }
 
     public int getUserId() {

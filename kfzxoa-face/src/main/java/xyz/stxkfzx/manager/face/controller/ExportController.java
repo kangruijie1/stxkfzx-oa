@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
-import xyz.stxkfzx.manager.face.pojo.FaceResult;
+import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.face.pojo.SignItemResult;
 import xyz.stxkfzx.manager.face.service.SelService;
 import xyz.stxkfzx.manager.face.utils.GetWeek;

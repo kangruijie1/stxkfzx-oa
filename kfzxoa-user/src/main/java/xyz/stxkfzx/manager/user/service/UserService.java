@@ -1,5 +1,6 @@
 package xyz.stxkfzx.manager.user.service;
 
+import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 
 import java.util.List;
@@ -30,7 +31,7 @@ public interface UserService {
      * @param user 用户对象
      * @return 新增用户的主键
      */
-    TUser addUser(TUser user);
+    FaceResult addUser(TUser user);
 
     /**
      * 判断注册的用户名是否重复

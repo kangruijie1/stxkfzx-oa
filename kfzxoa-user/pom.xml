@@ -63,9 +63,14 @@
         </dependency>
         <dependency>
             <groupId>xyz.stxkfzx.manager</groupId>
-            <artifactId>kfzxoa-common</artifactId>
+            <artifactId>kfzxoa-auth</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-activemq</artifactId>
         </dependency>
     </dependencies>
 

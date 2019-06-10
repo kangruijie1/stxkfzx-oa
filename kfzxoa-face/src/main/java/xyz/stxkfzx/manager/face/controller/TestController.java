@@ -18,12 +18,6 @@ public class TestController {
 	@Autowired
 	private SelService selService;
 
-	@RequestMapping({ "/test" })
-	public void test() throws InterruptedException, UnsupportedEncodingException {
-		List<TUser> batchAddFace = faceService.batchAddFace("F:\\0802");
-		System.out.println(batchAddFace.toString());
-	}
-
 	@RequestMapping({ "/sel/groupUsers" })
 	public void groupUsers(String group_id) throws InterruptedException {
 		selService.groupUsers(group_id);

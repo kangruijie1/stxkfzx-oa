@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/kfzxoa-face/pom.xml" />
         <option value="$PROJECT_DIR$/kfzxoa-user/pom.xml" />
         <option value="$PROJECT_DIR$/kfzxoa-common/pom.xml" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/pom.xml" />
       </list>
     </option>
   </component>

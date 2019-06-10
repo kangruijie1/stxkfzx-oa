@@ -117,7 +117,7 @@ public class SelServiceImpl implements SelService {
 			user.setDepartmentId(group_id);
 			user.setJobId(user_id);
 			user.setUsername(user_info);
-			int i = userService.addTuser(user);
+			userService.addUser(user);
 		}
 	}
 

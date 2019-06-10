@@ -1,7 +1,8 @@
 package xyz.stxkfzx.manager.common.pojo;
 
-
-import xyz.stxkfzx.manager.common.contants.SignContants;
+import xyz.stxkfzx.manager.common.enums.GeneralEnum;
+import xyz.stxkfzx.manager.common.enums.SignEnum;
+import xyz.stxkfzx.manager.common.enums.UserEnum;
 
 public class FaceResult {
 	
@@ -14,20 +15,36 @@ public class FaceResult {
 	
 	public FaceResult ok(Object data) {
 		this.data = data;
-		this.status = SignContants.SUCCESS;
-		this.msg = "成功！";
+		this.status = GeneralEnum.SUCCESS.getCode();
+		this.msg = GeneralEnum.SUCCESS.getMsg();
 		return this;
 	}
 
-
-	public FaceResult(Object data, Integer status, String msg) {
-		this.data = data;
-		this.status = status;
-		this.msg = msg;
+	public FaceResult fail() {
+		this.status = GeneralEnum.FAIL.getCode();
+		this.msg = GeneralEnum.FAIL.getMsg();
+		return this;
 	}
-	public FaceResult(Integer status, String msg) {
-		this.status = status;
-		this.msg = msg;
+
+	public FaceResult(Object data, SignEnum signEnum){
+		this.data = data;
+		this.msg = signEnum.getMsg();
+		this.status = signEnum.getCode();
+	}
+
+	public FaceResult(SignEnum signEnum){
+		this.msg = signEnum.getMsg();
+		this.status = signEnum.getCode();
+	}
+
+	public FaceResult(UserEnum userEnum){
+		this.msg = userEnum.getMsg();
+		this.status = userEnum.getCode();
+	}
+
+	public FaceResult(GeneralEnum generalEnum){
+		this.msg = generalEnum.getMsg();
+		this.status = generalEnum.getCode();
 	}
 
 	public Object getData() {

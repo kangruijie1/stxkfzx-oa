@@ -3,7 +3,7 @@ package xyz.stxkfzx.manager.face.service.impl;
 import com.besjon.pojo.AiBase;
 import com.besjon.pojo.AiFaceUser;
 import com.besjon.pojo.AiFaceUserList;
-import xyz.stxkfzx.manager.common.contants.SignContants;
+import xyz.stxkfzx.manager.common.enums.SignEnum;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.face.service.*;
 import org.springframework.stereotype.*;
@@ -15,8 +15,6 @@ import java.util.*;
 import java.sql.*;
 
 import xyz.stxkfzx.manager.face.utils.*;
-import xyz.stxkfzx.manager.face.faceDbOperation.*;
-import xyz.stxkfzx.manager.face.pojo.*;
 import xyz.stxkfzx.manager.user.pojo.TSignItem;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
@@ -73,9 +71,7 @@ public class FaceServiceImpl implements FaceService {
             for (AiFaceUser aiFaceUser : userList) {
                 // 人脸识别打分低于80分判定为找不到此人
                 if (Double.valueOf(aiFaceUser.getScore()) <= 80.0) {
-                    FaceResult faceResult = new FaceResult();
-                    faceResult.setMsg("请先录入人脸库！");
-                    faceResult.setStatus(SignContants.NOT_INPUT_FACE);
+                    FaceResult faceResult = new FaceResult(SignEnum.NOT_INPUT_FACE);
                     resultDataList.add(faceResult);
                 }
                 // 否则判定为识别出此用户
@@ -95,10 +91,7 @@ public class FaceServiceImpl implements FaceService {
                         item.setSignin_img(imgBase64);
                         item.setSignin(GetWeek.getTodayTime());
                         signItemMapper.insertSignItem(item);
-                        FaceResult faceResult = new FaceResult();
-                        faceResult.setData(user_info);
-                        faceResult.setMsg("打卡(上班)成功！");
-                        faceResult.setStatus(SignContants.SIGN_SUCCESS);
+                        FaceResult faceResult = new FaceResult(user_info, SignEnum.SIGN_IN_SUCCESS);
                         resultDataList.add(faceResult);
 
                     }
@@ -109,57 +102,16 @@ public class FaceServiceImpl implements FaceService {
                         item.setSignout_img(imgBase64);
                         item.setSignout(new Timestamp(System.currentTimeMillis()));
                         signItemMapper.updateSignItem(item, todayStart, todayEnd);
-                        FaceResult faceResult = new FaceResult();
-                        faceResult.setData(user_info);
-                        faceResult.setMsg("打卡(下班)成功！");
-                        faceResult.setStatus(SignContants.SIGN_SUCCESS);
+                        FaceResult faceResult = new FaceResult(user_info, SignEnum.SIGN_OUT_SUCCESS);
                         resultDataList.add(faceResult);
                     }
                 }
             }
-            result.setMsg("成功");
-            result.setStatus(SignContants.SUCCESS);
-            result.setData(resultDataList);
+            result.ok(resultDataList);
             return result;
         }
         // 没有搜索结果
-        result.setMsg("未检测到人脸");
-        result.setStatus(SignContants.NO_FACE_DETECTED);
+        result.fail();
         return result;
-    }
-
-    @Override
-    public List<TUser> batchAddFace(final String path) throws UnsupportedEncodingException {
-        final List<TUser> failUserList = new ArrayList<TUser>();
-        final File dir = new File(path);
-        final String group_id = dir.getName();
-        final File[] listFiles = dir.listFiles();
-        int index = 1;
-        final TUser user = new TUser();
-        File[] array;
-        for (int length = (array = listFiles).length, i = 0; i < length; ++i) {
-            final File imageFile = array[i];
-            if (!imageFile.isHidden()) {
-                final String imgBase64 = Base64Util.getImgBase64(imageFile.getPath());
-                final String user_id = Integer.toString(index++);
-                String user_info = imageFile.getName();
-                user_info = user_info.substring(0, user_info.lastIndexOf("."));
-                final FaceAddResult faceAddResult = FaceAdd.add(imgBase64, group_id, user_id, user_info);
-                user.setDepartmentId(group_id);
-                user.setJobId(user_id);
-                user.setUsername(user_info);
-                if ("0".equals(faceAddResult.getError_code())) {
-                    userService.addTuser(user);
-                    System.out.println(
-                            "-" + group_id + "-" + user_id + "-" + user_info + "\u6dfb\u52a0\u6210\u529f\uff01");
-                }
-                if ("222304".equals(faceAddResult.getError_code())) {
-                    System.out.println("-" + group_id + "-" + user_id + "-" + user_info
-                            + "\u6dfb\u52a0\u5931\u8d25\uff0c\u8bf7\u622a\u56fe\u540e\u91cd\u65b0\u6dfb\u52a0");
-                    failUserList.add(user);
-                }
-            }
-        }
-        return failUserList;
     }
 }

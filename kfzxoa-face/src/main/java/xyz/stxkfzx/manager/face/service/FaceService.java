@@ -14,8 +14,4 @@ public interface FaceService
     List<AiFaceUser> searchMulti(final String p0);
     
     FaceResult sign(final List<AiFaceUser> p0, final String p1);
-    
-    /*SignResult signOut(final List<AiFaceUser> p0, final String p1);*/
-    
-    List<TUser> batchAddFace(final String p0) throws UnsupportedEncodingException;
 }

@@ -7,7 +7,8 @@ import com.besjon.pojo.AiFaceUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import xyz.stxkfzx.manager.common.contants.SignContants;
+import xyz.stxkfzx.manager.common.enums.SignEnum;
+import xyz.stxkfzx.manager.common.enums.UserEnum;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.face.service.FaceService;
 import xyz.stxkfzx.manager.face.service.ManagerService;
@@ -26,7 +27,7 @@ public class ManagerServiceImpl implements ManagerService {
 	public FaceResult mustSign(String user_info) {
 		TUser tUser = userService.getTUserByUserInfo(user_info);
 		if(tUser == null) {
-			return new FaceResult(SignContants.FAIL, "请输入正确的用户名！");
+			return new FaceResult(UserEnum.USERNAME_PASSWORD_IS_FALSE);
 		}
 		List<AiFaceUser> aiFaceUserList = new ArrayList<AiFaceUser>();
 		AiFaceUser user = new AiFaceUser();

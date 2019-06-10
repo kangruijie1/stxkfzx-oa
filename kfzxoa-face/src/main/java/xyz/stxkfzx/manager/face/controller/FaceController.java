@@ -23,15 +23,6 @@ public class FaceController {
 		imgBase64 = imgBase64.substring(imgBase64.indexOf(44) + 1);
 		List<AiFaceUser> userList = faceService.searchMulti(imgBase64);
 		FaceResult result = faceService.sign(userList, imgBase64);
-		System.out.println(result.toString());
 		return result;
-	}
-
-	@RequestMapping({ "/face/batch/add" })
-	public List<TUser> betchAddFace(final String path) throws UnsupportedEncodingException {
-		final String decode = URLDecoder.decode(path, "utf-8");
-		System.out.println(decode);
-		final List<TUser> failUserList = (List<TUser>) this.faceService.batchAddFace(decode);
-		return failUserList;
 	}
 }
