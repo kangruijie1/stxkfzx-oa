@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.Date;
 
 import org.springframework.scheduling.annotation.*;
-import xyz.stxkfzx.manager.user.pojo.TSignItem;
+import xyz.stxkfzx.manager.face.pojo.TSignItem;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
 

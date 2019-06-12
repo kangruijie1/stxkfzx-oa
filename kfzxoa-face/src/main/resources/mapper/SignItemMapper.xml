@@ -39,7 +39,7 @@
 		</trim>
 	</insert>
 		
-	<select id="selSignItem" resultType="xyz.stxkfzx.manager.user.pojo.TSignItem">
+	<select id="selSignItem" resultType="xyz.stxkfzx.manager.face.pojo.TSignItem">
 		SELECT userId, uid, signin, signout FROM signitem
 		<where>
 			<if test="uid != 0">

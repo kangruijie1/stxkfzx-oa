@@ -1,4 +1,4 @@
-package xyz.stxkfzx.manager.user.pojo;
+package xyz.stxkfzx.manager.face.pojo;
 
 import java.sql.*;
 

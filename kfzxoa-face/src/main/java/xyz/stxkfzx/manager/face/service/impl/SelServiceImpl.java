@@ -10,7 +10,7 @@ import java.text.*;
 import xyz.stxkfzx.manager.face.faceDbOperation.*;
 import java.util.*;
 import xyz.stxkfzx.manager.face.pojo.*;
-import xyz.stxkfzx.manager.user.pojo.TSignItem;
+import xyz.stxkfzx.manager.face.pojo.TSignItem;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
 

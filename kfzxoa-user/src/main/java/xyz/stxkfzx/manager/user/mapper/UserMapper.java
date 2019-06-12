@@ -11,6 +11,4 @@ public interface UserMapper
     int insertUser(TUser tUser);
     
     List<TUser> selectUser(TUser tUser);
-    
-    List<String> selectUserTest();
 }

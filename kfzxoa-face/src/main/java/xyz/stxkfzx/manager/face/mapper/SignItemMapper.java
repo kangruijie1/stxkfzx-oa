@@ -1,7 +1,7 @@
 package xyz.stxkfzx.manager.face.mapper;
 
 import org.apache.ibatis.annotations.*;
-import xyz.stxkfzx.manager.user.pojo.TSignItem;
+import xyz.stxkfzx.manager.face.pojo.TSignItem;
 
 import java.util.*;
 

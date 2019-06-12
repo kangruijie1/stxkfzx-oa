@@ -15,11 +15,9 @@ import java.util.*;
 import java.sql.*;
 
 import xyz.stxkfzx.manager.face.utils.*;
-import xyz.stxkfzx.manager.user.pojo.TSignItem;
+import xyz.stxkfzx.manager.face.pojo.TSignItem;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
-
-import java.io.*;
 
 @Service
 public class FaceServiceImpl implements FaceService {
