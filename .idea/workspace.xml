@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3fda57f-7f4e-4dc3-a76a-38a78691b4f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/config/CheckUserIsExist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/config/PassToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/config/UserLoginToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/entity/JwtConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/entity/UserBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/handle/AuthenticationInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/handle/InterceptorConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/mapper/UserBaseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/properties/JwtProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/utils/CodecUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/utils/CookieUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/utils/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/utils/ObjectUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/utils/RsaUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/xin/stxkfzx/weekend/auth/mapper/UserBaseMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/enums/GeneralEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/enums/SignEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/enums/UserEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/consumer/MessageConsumerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/vo/TUserVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/contants/SignContants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/pojo/FaceResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/pojo/FaceResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/ExportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/ExportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/FaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/FaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/JudgeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/JudgeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/SelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/SelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/FaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/FaceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/FaceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/FaceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/JudgeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/JudgeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/ManagerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/SelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/SelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/pojo/TUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/pojo/TUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -81,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/consumer/MessageConsumerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+            <state relative-caret-position="264">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#183#184#0" expanded="true" />
@@ -476,7 +431,7 @@
       <workItem from="1559700233807" duration="10479000" />
       <workItem from="1559790504174" duration="6118000" />
       <workItem from="1559810081470" duration="5765000" />
-      <workItem from="1560131360925" duration="21591000" />
+      <workItem from="1560131360925" duration="21680000" />
     </task>
     <task id="LOCAL-00001" summary="use dubbo">
       <created>1559647849201</created>
@@ -492,11 +447,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559734131084</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="use dubbo">
+      <created>1560167712450</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1560167712451</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49469000" />
+    <option name="totallyTimeSpent" value="49558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -953,8 +915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/consumer/MessageConsumerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        <state relative-caret-position="264">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#183#184#0" expanded="true" />
