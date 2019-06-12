@@ -17,6 +17,6 @@ public class KfzxoaAuthApplicationTests {
     AuthService authService;
     @Test
     public void contextLoads() {
-        authService.login("1", "2", null);
+        authService.login("kkk", "cf123456789", null);
     }
 }

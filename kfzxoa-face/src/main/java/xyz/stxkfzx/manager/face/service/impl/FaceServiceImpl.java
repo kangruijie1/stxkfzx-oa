@@ -1,5 +1,6 @@
 package xyz.stxkfzx.manager.face.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.besjon.pojo.AiBase;
 import com.besjon.pojo.AiFaceUser;
 import com.besjon.pojo.AiFaceUserList;
@@ -21,7 +22,7 @@ import xyz.stxkfzx.manager.user.service.UserService;
 
 @Service
 public class FaceServiceImpl implements FaceService {
-    @Autowired
+    @Reference(version = "1.0.0")
     private UserService userService;
     @Autowired
     private SignItemMapper signItemMapper;
