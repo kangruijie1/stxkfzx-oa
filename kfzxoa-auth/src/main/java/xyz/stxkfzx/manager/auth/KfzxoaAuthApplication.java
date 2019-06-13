@@ -11,5 +11,4 @@ public class KfzxoaAuthApplication {
     public static void main(String[] args) {
         SpringApplication.run(KfzxoaAuthApplication.class, args);
     }
-
 }

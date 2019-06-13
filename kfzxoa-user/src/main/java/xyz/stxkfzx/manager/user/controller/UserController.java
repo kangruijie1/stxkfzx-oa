@@ -1,7 +1,6 @@
 package xyz.stxkfzx.manager.user.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.user.pojo.TUser;
@@ -9,6 +8,8 @@ import xyz.stxkfzx.manager.user.service.UserService;
 
 @RestController
 public class UserController {
+
+    @Autowired
     private UserService userService;
 
     @PostMapping("/register")
@@ -20,5 +21,12 @@ public class UserController {
     public FaceResult checkUserName(String username) {
         Boolean is = userService.checkUsernameIsRepeat(username);
         return new FaceResult().ok(is);
+    }
+
+    @PostMapping("alert")
+    public FaceResult updateUser(@RequestParam(value = "username", required = true) String username,
+                                 @RequestParam("password") String password,
+                                 @RequestParam("phoneNum") String phoneNum){
+        return userService.updateUser(username, password, phoneNum);
     }
 }

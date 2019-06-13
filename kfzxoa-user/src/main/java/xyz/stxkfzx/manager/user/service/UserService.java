@@ -39,4 +39,14 @@ public interface UserService {
      * @return 是或否
      */
     Boolean checkUsernameIsRepeat(String username);
+
+    /**
+     * 更新用户密码或手机号
+     *
+     * @param username
+     * @param password 密码
+     * @param phoneNum 手机号
+     * @return FaceResult
+     */
+    FaceResult updateUser(String username, String password, String phoneNum);
 }

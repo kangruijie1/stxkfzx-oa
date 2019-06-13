@@ -44,7 +44,7 @@ public class AuthController {
      * @date 2019-04-13
      */
     @PostMapping("accredit")
-    public FaceResult login(String username, String password, HttpServletResponse response ) {
+    public FaceResult login(String username, String password, HttpServletResponse response) {
         return authService.login(username, password, response);
     }
 

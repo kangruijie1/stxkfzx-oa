@@ -19,8 +19,8 @@
     </sql>
 
 	<insert id="insertUser"  useGeneratedKeys="true" keyProperty="userId" >
-		insert into user(departmentId, jobId, username)
-		values(#{departmentId}, #{jobId}, #{username})
+		insert into t_user(department_id, job_id, username, password, phone_num, status)
+		values(#{departmentId}, #{jobId}, #{username}, #{password}, #{phoneNum}, #{status})
 	</insert>
 
 	<select id="selectUser" resultMap="UserResultMap" parameterType="xyz.stxkfzx.manager.user.pojo.TUser">
@@ -39,4 +39,13 @@
 			</if>
 		</where>
 	</select>
+
+	<update id="updateUser" parameterType="xyz.stxkfzx.manager.user.pojo.TUser">
+		update t_user
+		<trim prefix="set" suffixOverrides=",">
+			<if test="password != null">password = #{password}, </if>
+			<if test="phoneNum != null">phone_num = #{phoneNum}, </if>
+		</trim>
+		where username = #{username}
+	</update>
 </mapper>

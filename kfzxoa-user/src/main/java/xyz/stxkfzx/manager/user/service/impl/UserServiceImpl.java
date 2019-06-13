@@ -7,6 +7,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 import xyz.stxkfzx.manager.auth.utils.CodecUtils;
 import xyz.stxkfzx.manager.common.enums.UserEnum;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
@@ -15,11 +16,10 @@ import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
 import xyz.stxkfzx.manager.user.vo.TUserVO;
 
-import java.util.Date;
 import java.util.List;
 
 @Component
-@Service()
+@Service
 public class UserServiceImpl implements UserService {
 
     private final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
@@ -55,14 +55,15 @@ public class UserServiceImpl implements UserService {
             logger.info("用户名重复");
             return new FaceResult(UserEnum.USERNAME_REPEAT);
         }
-        user.setCreateTime(new Date());
-        user.setUpdateTime(new Date());
 
         // 生成一段盐值
         String salt = CodecUtils.generateSalt(user.getUsername());
 
         // 对密码进行加密
-        user.setPassword(CodecUtils.md5Hex(user.getPassword(), salt));
+        user.setPassword(CodecUtils.md5HexM(user.getPassword(), salt));
+
+        //刚注册默认不激活
+        user.setStatus((short) 2);
 
         int i = userMapper.insertUser(user);
         if (i != 1) {
@@ -87,7 +88,30 @@ public class UserServiceImpl implements UserService {
     public Boolean checkUsernameIsRepeat(String username) {
         TUser user = new TUser();
         user.setUsername(username);
-        return userMapper.selectUser(user) != null;
+        return !CollectionUtils.isEmpty(userMapper.selectUser(user));
+    }
+
+
+    @Override
+    public FaceResult updateUser(String username, String password, String phoneNum) {
+        TUser user = new TUser();
+
+        if(!StringUtils.isEmpty(password)){
+            // 生成一段盐值
+            String salt = CodecUtils.generateSalt(username);
+            // 对密码进行加密
+            user.setPassword(CodecUtils.shaHex(password, null));
+        }
+
+        user.setUsername(username);
+        user.setPhoneNum(phoneNum);
+
+        int i = userMapper.updateUser(user);
+
+        if (i == 1){
+            return new FaceResult().ok(true);
+        }
+        return new FaceResult().fail();
     }
 
 }

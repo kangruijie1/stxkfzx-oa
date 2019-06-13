@@ -43,13 +43,12 @@ public class AuthService {
 
        UserBase user = userBaseMapper.selectByUsername(username);
         // 拿到用户密码利用盐值加密，并与数据库保存的加密密码进行对比
-        String md5Password = CodecUtils.md5Hex(password, CodecUtils.generateSalt(user.getUsername()));
-        /*if (!user.getPassword().equals(md5Password)) {
+        String md5Password = CodecUtils.md5HexM(password, CodecUtils.generateSalt(user.getUsername()));
+        if (!user.getPassword().equals(md5Password)) {
             logger.error("【授权中心】用户名或密码错误，用户名：{}", username);
             return new FaceResult(UserEnum.USERNAME_PASSWORD_IS_FALSE);
-        }*/
+        }
         UserBase userBase = new UserBase(user.getUserId(), user.getUsername(), user.getStatus());
-        System.out.println(userBase.toString());
         // 生成Token
         String token = JwtUtils.generateToken(userBase, jwtProperties.getPrivateKey(), jwtProperties.getExpire());
         if (StringUtils.isBlank(token)) {
@@ -57,7 +56,7 @@ public class AuthService {
             return new FaceResult(UserEnum.TOKEN_IS_NULL);
         }
         logger.info("【授权中心】生成token为：{}", token);
-       // response.setHeader("Authorization", token);
+        response.setHeader("Authorization", token);
         redisTemplate.opsForValue().set(token, userBase, 30, TimeUnit.MINUTES);
 
         return new FaceResult().ok(userBase);
@@ -80,6 +79,8 @@ public class AuthService {
                 logger.warn("【授权中心】重新生成token:{}",token);
                 redisTemplate.opsForValue().set(token, userBase, 30, TimeUnit.MINUTES);
             }
+        }else {
+            logger.warn("【授权中心】用户{}token有效", userBase);
         }
         return userBase;
     }

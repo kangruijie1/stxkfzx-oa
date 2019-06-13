@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 public class CodecUtils {
     private static final Logger logger = LoggerFactory.getLogger(CodecUtils.class);
 
-    public static String md5Hex(String data, String salt) {
+    public static String md5HexM(String data, String salt) {
         if (StringUtils.isBlank(salt)) {
             salt = data.hashCode() + "";
         }
