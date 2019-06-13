@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3fda57f-7f4e-4dc3-a76a-38a78691b4f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/TSignItemNew.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/mapper/UserBaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/mapper/UserBaseMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/xin/stxkfzx/weekend/auth/mapper/UserBaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/mapper/UserBaseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/test/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/test/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/mapper/SignItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/mapper/SignItemMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/FaceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/FaceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/SelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/SelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/timer/TimerSignout.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/timer/TimerSignout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/SignItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/SignItemMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/pojo/TSignItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/TSignItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/SignItemMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="984">
               <caret line="41" column="76" selection-start-line="41" selection-start-column="76" selection-end-line="41" selection-end-column="76" />
             </state>
           </provider>
@@ -49,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/TSignItem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -57,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/TSignItemNew.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="288">
+              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -209,7 +195,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,7 +364,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -500,12 +486,12 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.KfzxoaAuthApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.KfzxoaAuthApplicationTests" />
       <item itemvalue="Spring Boot.KfzxoaFaceApplication" />
       <item itemvalue="Spring Boot.KfzxoaUserApplication" />
       <item itemvalue="Spring Boot.KfzxoaCommonApplication" />
       <item itemvalue="Spring Boot.KfzxoaAuthApplication" />
-      <item itemvalue="JUnit.KfzxoaAuthApplicationTests.contextLoads" />
-      <item itemvalue="JUnit.KfzxoaAuthApplicationTests" />
     </list>
     <recent_temporary>
       <list>
@@ -529,7 +515,8 @@
       <workItem from="1559790504174" duration="6118000" />
       <workItem from="1559810081470" duration="5765000" />
       <workItem from="1560131360925" duration="21680000" />
-      <workItem from="1560332526036" duration="6097000" />
+      <workItem from="1560332526036" duration="6174000" />
+      <workItem from="1560391091502" duration="634000" />
     </task>
     <task id="LOCAL-00001" summary="use dubbo">
       <created>1559647849201</created>
@@ -559,7 +546,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560332592012</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="use dubbo">
+      <created>1560340358909</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1560340358909</updated>
+    </task>
+    <task id="LOCAL-00006" summary="use dubbo">
+      <created>1560340376145</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560340376145</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -595,13 +596,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55655000" />
+    <option name="totallyTimeSpent" value="56366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" id="Project" order="0" visible="true" weight="0.19515885" />
+      <window_info active="true" id="Project" order="0" visible="true" weight="0.19818456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1007,10 +1008,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/FaceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/SignItemMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="984">
           <caret line="41" column="76" selection-start-line="41" selection-start-column="76" selection-end-line="41" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/TSignItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -1021,13 +1036,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/FaceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/FaceService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1035,17 +1043,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/TSignItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/TSignItemNew.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="288">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
         </state>
       </provider>
     </entry>
