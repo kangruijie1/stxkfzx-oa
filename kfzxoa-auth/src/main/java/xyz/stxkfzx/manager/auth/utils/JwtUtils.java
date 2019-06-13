@@ -27,7 +27,7 @@ public class JwtUtils {
      */
     public static String generateToken(UserBase userBase, PrivateKey privateKey, int expireMinutes) {
         return Jwts.builder()
-                .claim(JwtConstants.JWT_KEY_ID, userBase.getId())
+                .claim(JwtConstants.JWT_KEY_ID, userBase.getUserId())
                 .claim(JwtConstants.JWT_KEY_USER_NAME, userBase.getUsername())
                 .setExpiration(DateTime.now().plusMinutes(expireMinutes).toDate())
                 .signWith(SignatureAlgorithm.RS256, privateKey)
@@ -45,7 +45,7 @@ public class JwtUtils {
      */
     public static String generateToken(UserBase userBase, byte[] privateKey, int expireMinutes) throws Exception {
         return Jwts.builder()
-                .claim(JwtConstants.JWT_KEY_ID, userBase.getId())
+                .claim(JwtConstants.JWT_KEY_ID, userBase.getUserId())
                 .claim(JwtConstants.JWT_KEY_USER_NAME, userBase.getUsername())
                 .setExpiration(DateTime.now().plus(expireMinutes).toDate())
                 .signWith(SignatureAlgorithm.ES256, RsaUtils.getPrivateKey(privateKey))

@@ -1,5 +1,6 @@
 package xyz.stxkfzx.manager.face.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import xyz.stxkfzx.manager.face.service.*;
 import org.springframework.stereotype.*;
 import org.springframework.beans.factory.annotation.*;
@@ -18,7 +19,7 @@ import xyz.stxkfzx.manager.user.service.UserService;
 public class SelServiceImpl implements SelService {
 	@Autowired
 	private SignItemMapper signItemMapper;
-	@Autowired
+	@Reference(version = "1.0.0")
 	private UserService userService;
 
 	@Override

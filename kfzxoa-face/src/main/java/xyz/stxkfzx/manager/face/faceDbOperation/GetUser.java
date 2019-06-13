@@ -1,12 +1,11 @@
 package xyz.stxkfzx.manager.face.faceDbOperation;
 
-import xyz.stxkfzx.manager.face.pojo.*;
 import xyz.stxkfzx.manager.face.utils.*;
 import java.util.*;
 
 public class GetUser
 {
-    public static FaceUser getUser(final String group_id, final String user_id) {
+    /*public static FaceUser getUser(final String group_id, final String user_id) {
         final String url = "https://aip.baidubce.com/rest/2.0/face/v3/faceset/face/getlist";
         try {
             final Map<String, Object> map = new HashMap<String, Object>();
@@ -24,5 +23,5 @@ public class GetUser
             e.printStackTrace();
             return null;
         }
-    }
+    }*/
 }

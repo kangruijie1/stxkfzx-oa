@@ -3,7 +3,7 @@
 <mapper namespace="xyz.stxkfzx.manager.user.mapper.UserMapper">
 
 	<resultMap id="UserResultMap" type="xyz.stxkfzx.manager.user.pojo.TUser">
-		<id column="t_user_id" property="userId" jdbcType="INTEGER"/>
+		<id column="user_id" property="userId" jdbcType="INTEGER"/>
 		<result column="department_id" property="departmentId" jdbcType="VARCHAR"/>
 		<result column="job_id" property="jobId" jdbcType="VARCHAR"/>
 		<result column="username" property="username" jdbcType="VARCHAR"/>
@@ -14,8 +14,8 @@
 		<result column="status" property="status" jdbcType="SMALLINT"/>
 	</resultMap>
 
-	<sql id="Base_Column_List">
-        t_user_id, department_id, job_id, username, phone_num, create_time, update_time, status
+	<sql id="User_Column_List">
+        user_id, department_id, job_id, username, phone_num, status
     </sql>
 
 	<insert id="insertUser"  useGeneratedKeys="true" keyProperty="userId" >
@@ -24,7 +24,9 @@
 	</insert>
 
 	<select id="selectUser" resultMap="UserResultMap" parameterType="xyz.stxkfzx.manager.user.pojo.TUser">
-		select * from user
+		select
+			<include refid="User_Column_List"/>
+		 from t_user
 		<where>
 			<if test="departmentId != null and departmentId != ''">
 				and department_id = #{departmentId, jdbcType=VARCHAR}

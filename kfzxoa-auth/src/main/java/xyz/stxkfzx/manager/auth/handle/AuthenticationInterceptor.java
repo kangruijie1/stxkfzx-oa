@@ -67,7 +67,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                     logger.error("用户认证过期");
                     throw new Exception();
                 }
-                UserBase user = authService.findUserById(userBase.getId());
+                UserBase user = authService.findUserById(userBase.getUserId());
                 if (user == null) {
                     logger.error("用户不存在");
                     throw new Exception();

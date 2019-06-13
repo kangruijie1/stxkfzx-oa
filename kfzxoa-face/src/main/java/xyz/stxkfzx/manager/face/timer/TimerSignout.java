@@ -1,5 +1,6 @@
 package xyz.stxkfzx.manager.face.timer;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.*;
 import org.springframework.beans.factory.annotation.*;
 import xyz.stxkfzx.manager.face.mapper.*;
@@ -17,7 +18,7 @@ public class TimerSignout
 {
     @Autowired
     private SignItemMapper signItemMapper;
-    @Autowired
+    @Reference(version = "1.0.0")
     private UserService userService;
     
     @Scheduled(cron = "0 50 22 * * ?")
