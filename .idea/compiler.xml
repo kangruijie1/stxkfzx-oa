@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="kfzxoa-common" />
         <module name="kfzxoa-auth" />
         <module name="kfzxoa-face" />
-        <module name="stxkfzx-oa" />
         <module name="kfzxoa-user" />
-        <module name="kfzxoa-common" />
+        <module name="stxkfzx-oa" />
       </profile>
     </annotationProcessing>
   </component>

@@ -49,31 +49,24 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                 return true;
             }
         }
-        // 检查是否有@UserLoginToken注解，有则进行用户验证
-        if (method.isAnnotationPresent(UserLoginToken.class)) {
-            UserLoginToken userLoginToken = method.getAnnotation(UserLoginToken.class);
-            if (userLoginToken.required()) {
-                // 执行认证
-                if (token == null) {
-                    logger.error("token为null，用户认证失败");
-                    throw new Exception();
-                }
-                // 获取 token 中的 auth id
-                UserBase userBase;
-                try {
-                    logger.info("获取到PublicKey()");
-                    userBase = authService.verifyUser(token,httpServletResponse);
-                } catch (Exception e) {
-                    logger.error("用户认证过期");
-                    throw new Exception();
-                }
-                UserBase user = authService.findUserById(userBase.getUserId());
-                if (user == null) {
-                    logger.error("用户不存在");
-                    throw new Exception();
-                }
-                return true;
-            }
+        // 执行认证
+        if (token == null) {
+            logger.error("token为null，用户认证失败");
+            throw new Exception();
+        }
+        // 获取 token 中的 auth id
+        UserBase userBase;
+        try {
+            logger.info("获取到PublicKey()");
+            userBase = authService.verifyUser(token, httpServletResponse);
+        } catch (Exception e) {
+            logger.error("用户认证过期");
+            throw new Exception();
+        }
+        UserBase user = authService.findUserById(userBase.getUserId());
+        if (user == null) {
+            logger.error("用户不存在");
+            throw new Exception();
         }
         return true;
     }

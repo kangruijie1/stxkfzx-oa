@@ -11,6 +11,8 @@ import org.springframework.util.StringUtils;
 import xyz.stxkfzx.manager.auth.utils.CodecUtils;
 import xyz.stxkfzx.manager.common.enums.UserEnum;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
+import xyz.stxkfzx.manager.user.enums.ManagerEnum;
+import xyz.stxkfzx.manager.user.enums.WorkingEnum;
 import xyz.stxkfzx.manager.user.mapper.UserMapper;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
@@ -63,7 +65,10 @@ public class UserServiceImpl implements UserService {
         user.setPassword(CodecUtils.md5HexM(user.getPassword(), salt));
 
         //刚注册默认不激活
-        user.setStatus((short) 2);
+        user.setStatus(WorkingEnum.NOT_ACTIVE.getWorkingStatusCode());
+
+        //刚注册默认为学员
+        user.setManagerType(ManagerEnum.STUDENT.getManagerCode());
 
         int i = userMapper.insertUser(user);
         if (i != 1) {

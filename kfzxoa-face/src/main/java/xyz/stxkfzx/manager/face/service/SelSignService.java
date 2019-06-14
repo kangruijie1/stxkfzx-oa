@@ -5,7 +5,7 @@ import java.text.*;
 import xyz.stxkfzx.manager.face.pojo.*;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 
-public interface SelService
+public interface SelSignService
 {
     List<SignItemResult> selDepartmentSignItem(int week, String group_id) throws ParseException;
     

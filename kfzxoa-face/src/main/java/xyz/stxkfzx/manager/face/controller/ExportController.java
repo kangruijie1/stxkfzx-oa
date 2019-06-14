@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.face.pojo.SignItemResult;
-import xyz.stxkfzx.manager.face.service.SelService;
+import xyz.stxkfzx.manager.face.service.SelSignService;
 import xyz.stxkfzx.manager.face.utils.GetWeek;
 
 @RestController
 public class ExportController {
 
 	@Autowired
-	private SelService selService;
+	private SelSignService selSignService;
 
 	@RequestMapping("/export/info")
 	public FaceResult exportInfo(int week, String group_id) throws ParseException {
@@ -28,11 +28,12 @@ public class ExportController {
 			week = GetWeek.getWeekNumber();
 		}
 
-		List<SignItemResult> selGroupSignItem = selService.selDepartmentSignItem(week, group_id);
+		List<SignItemResult> selGroupSignItem = selSignService.selDepartmentSignItem(week, group_id);
 		List<Map<String, Object>> resultList = setTableInfo(selGroupSignItem);
 		
 		return new FaceResult().ok(resultList);
 	}
+
 	public List<Map<String, Object>> setTableInfo(List<SignItemResult> selGroupSignItem) {
 		List<Map<String, Object>> resultList = new ArrayList<Map<String, Object>>();
 		if (selGroupSignItem != null && selGroupSignItem.size() > 0) {

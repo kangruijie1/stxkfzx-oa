@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class SelController {
 	@Autowired
-	private SelService selService;
+	private SelSignService selSignService;
 
 	@RequestMapping({ "/sel/group" })
 	public FaceResult selGroupUsers(int week, String group_id) throws ParseException {
@@ -21,7 +21,7 @@ public class SelController {
 			week = GetWeek.getWeekNumber();
 		}
 		resultData.put("week", week);
-		List<SignItemResult> signItemResultList = selService.selDepartmentSignItem(week, group_id);
+		List<SignItemResult> signItemResultList = selSignService.selDepartmentSignItem(week, group_id);
 		resultData.put("signItemList", signItemResultList);
 		setDepartment(resultData, group_id);
 		FaceResult ok = new FaceResult().ok(resultData);

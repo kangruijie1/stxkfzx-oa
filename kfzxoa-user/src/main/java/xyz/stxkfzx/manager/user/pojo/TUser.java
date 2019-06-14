@@ -12,9 +12,18 @@ public class TUser implements Serializable {
     private String phoneNum;
     private Date createTime;
     private Date updateTime;
+    private Integer managerType;
     private short status;
 
     public TUser() {
+    }
+
+    public Integer getManagerType() {
+        return managerType;
+    }
+
+    public void setManagerType(Integer managerType) {
+        this.managerType = managerType;
     }
 
     public short getStatus() {
@@ -100,6 +109,8 @@ public class TUser implements Serializable {
                 ", phoneNum='" + phoneNum + '\'' +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", managerType=" + managerType +
+                ", status=" + status +
                 '}';
     }
 }

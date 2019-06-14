@@ -1,11 +1,9 @@
 package xyz.stxkfzx.manager.face.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import org.springframework.stereotype.*;
 
 import xyz.stxkfzx.manager.face.service.*;
 
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.*;
@@ -18,13 +16,13 @@ public class TestController {
 	@Autowired
 	private FaceService faceService;
 	@Autowired
-	private SelService selService;
+	private SelSignService selSignService;
 	@Reference()
 	UserService userService;
 
 	@RequestMapping({ "/sel/groupUsers" })
 	public void groupUsers(String group_id) throws InterruptedException {
-		selService.groupUsers(group_id);
+		selSignService.groupUsers(group_id);
 	}
 
 	@RequestMapping({ "/sel/all" })

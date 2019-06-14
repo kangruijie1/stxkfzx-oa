@@ -23,10 +23,10 @@ public class UserController {
         return new FaceResult().ok(is);
     }
 
-    @PostMapping("alert")
+    @PostMapping("/alert")
     public FaceResult updateUser(@RequestParam(value = "username", required = true) String username,
-                                 @RequestParam("password") String password,
-                                 @RequestParam("phoneNum") String phoneNum){
+                                 @RequestParam(value = "password", required = false) String password,
+                                 @RequestParam(value = "phoneNum" ,required = false) String phoneNum){
         return userService.updateUser(username, password, phoneNum);
     }
 }

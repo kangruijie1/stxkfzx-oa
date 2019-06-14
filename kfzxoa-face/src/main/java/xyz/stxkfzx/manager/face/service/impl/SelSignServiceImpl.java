@@ -16,7 +16,7 @@ import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
 
 @Service
-public class SelServiceImpl implements SelService {
+public class SelSignServiceImpl implements SelSignService {
 	@Autowired
 	private SignItemMapper signItemMapper;
 	@Reference(version = "1.0.0")

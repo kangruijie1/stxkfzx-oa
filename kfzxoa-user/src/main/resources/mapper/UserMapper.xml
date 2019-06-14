@@ -11,16 +11,17 @@
 		<result column="password" property="password" jdbcType="VARCHAR"/>
 		<result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
 		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+		<result column="manager_type" property="managerType" jdbcType="INTEGER"/>
 		<result column="status" property="status" jdbcType="SMALLINT"/>
 	</resultMap>
 
 	<sql id="User_Column_List">
-        user_id, department_id, job_id, username, phone_num, status
+        user_id, department_id, job_id, username, phone_num, manager_type, status
     </sql>
 
 	<insert id="insertUser"  useGeneratedKeys="true" keyProperty="userId" >
-		insert into t_user(department_id, job_id, username, password, phone_num, status)
-		values(#{departmentId}, #{jobId}, #{username}, #{password}, #{phoneNum}, #{status})
+		insert into t_user(department_id, username, password, phone_num, manager_type, status)
+		values(#{departmentId}, #{username}, #{password}, #{phoneNum}, #{managerType}, #{status})
 	</insert>
 
 	<select id="selectUser" resultMap="UserResultMap" parameterType="xyz.stxkfzx.manager.user.pojo.TUser">
@@ -45,6 +46,7 @@
 		<trim prefix="set" suffixOverrides=",">
 			<if test="password != null">password = #{password}, </if>
 			<if test="phoneNum != null">phone_num = #{phoneNum}, </if>
+			<if test="managerType != null">manager_type= #{managerType}, </if>
 		</trim>
 		where username = #{username}
 	</update>
