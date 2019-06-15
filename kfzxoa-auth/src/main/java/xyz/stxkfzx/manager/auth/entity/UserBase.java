@@ -16,9 +16,19 @@ public class UserBase implements Serializable {
     private String username;
     private String password;
     private Date createTime;
-    private Integer status;
+    private Integer managerType;
+    private Short status;
 
-    public UserBase() {
+    public UserBase(Integer userId, String username, Integer status) {
+        this.userId = userId;
+        this.username = username;
+        this.status = status.shortValue();
+    }
+
+    public UserBase(Integer userId, String username, Short status) {
+        this.userId = userId;
+        this.username = username;
+        this.status = status;
     }
 
     public UserBase(Integer userId, String username) {
@@ -26,10 +36,7 @@ public class UserBase implements Serializable {
         this.username = username;
     }
 
-    public UserBase(Integer userId, String username, Integer status) {
-        this.userId = userId;
-        this.username = username;
-        this.status = status;
+    public UserBase() {
     }
 
     public Integer getUserId() {
@@ -40,14 +47,6 @@ public class UserBase implements Serializable {
         this.userId = userId;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getUsername() {
         return username;
     }
@@ -56,12 +55,12 @@ public class UserBase implements Serializable {
         this.username = username;
     }
 
-    public Integer getStatus() {
-        return status;
+    public String getPassword() {
+        return password;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Date getCreateTime() {
@@ -72,13 +71,30 @@ public class UserBase implements Serializable {
         this.createTime = createTime;
     }
 
+    public Integer getManagerType() {
+        return managerType;
+    }
+
+    public void setManagerType(Integer managerType) {
+        this.managerType = managerType;
+    }
+
+    public Short getStatus() {
+        return status;
+    }
+
+    public void setStatus(Short status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "UserBase{" +
-                "userId='" + userId + '\'' +
+                "userId=" + userId +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", createTime='" + createTime + '\'' +
+                ", createTime=" + createTime +
+                ", managerType=" + managerType +
                 ", status=" + status +
                 '}';
     }

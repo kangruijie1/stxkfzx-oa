@@ -7,11 +7,16 @@ import org.springframework.core.annotation.Order;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import xyz.stxkfzx.manager.auth.config.AuthConfig;
 import xyz.stxkfzx.manager.auth.config.PassToken;
 import xyz.stxkfzx.manager.auth.config.UserLoginToken;
 import xyz.stxkfzx.manager.auth.entity.UserBase;
+import xyz.stxkfzx.manager.auth.enums.AuthEnum;
 import xyz.stxkfzx.manager.auth.properties.JwtProperties;
 import xyz.stxkfzx.manager.auth.service.AuthService;
+import xyz.stxkfzx.manager.common.enums.UserEnum;
+import xyz.stxkfzx.manager.common.enums.WorkingEnum;
+import xyz.stxkfzx.manager.common.myException.OAException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -52,7 +57,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
         // 执行认证
         if (token == null) {
             logger.error("token为null，用户认证失败");
-            throw new Exception();
+            throw new OAException(AuthEnum.TOKEN_IS_NULL.getMsg());
         }
         // 获取 token 中的 auth id
         UserBase userBase;
@@ -61,13 +66,30 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
             userBase = authService.verifyUser(token, httpServletResponse);
         } catch (Exception e) {
             logger.error("用户认证过期");
-            throw new Exception();
+            throw new OAException(AuthEnum.TOKEN_IS_LOW.getMsg());
         }
         UserBase user = authService.findUserById(userBase.getUserId());
         if (user == null) {
             logger.error("用户不存在");
-            throw new Exception();
+            throw new OAException(UserEnum.USER_NOT_EXIST.getMsg());
         }
+        //如果用户状态不为在部则无权限
+        if (!user.getStatus().equals(WorkingEnum.IN_THE_DEPARTMENT.getWorkingStatusCode())){
+            logger.error("用户已退部或者未激活");
+            throw new OAException(AuthEnum.USER_NOT_IN_DEPARTMENT.getMsg());
+        }
+
+        //检查是否请求的是管理员方法
+        if(AuthConfig.managerMethodList.contains(method.getName())){
+            //检查用户是否为管理者
+            if(AuthConfig.managerCodeList.contains(user.getManagerType())){
+                return true;
+            }else{
+                logger.error("您没有权限访问此操作");
+                throw new OAException(AuthEnum.NOT_AUTH_EXECUTE.getMsg());
+            }
+        }
+
         return true;
     }
 

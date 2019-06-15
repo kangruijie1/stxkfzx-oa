@@ -1,4 +1,4 @@
-package xyz.stxkfzx.manager.user.enums;
+package xyz.stxkfzx.manager.common.enums;
 
 public enum WorkingEnum {
 

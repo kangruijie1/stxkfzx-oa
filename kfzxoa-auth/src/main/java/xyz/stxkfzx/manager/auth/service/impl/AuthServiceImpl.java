@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import xyz.stxkfzx.manager.auth.entity.UserBase;
+import xyz.stxkfzx.manager.auth.enums.AuthEnum;
 import xyz.stxkfzx.manager.auth.mapper.UserBaseMapper;
 import xyz.stxkfzx.manager.auth.properties.JwtProperties;
 import xyz.stxkfzx.manager.auth.service.AuthService;
