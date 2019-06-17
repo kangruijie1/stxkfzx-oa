@@ -2,26 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3fda57f-7f4e-4dc3-a76a-38a78691b4f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/config/AuthConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/enums/AuthEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/authConfig.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/myException/ExceptionHander.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/myException/OAException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/ipConfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/UserBaseMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/entity/UserBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/entity/UserBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/config/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/config/AuthConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/handle/AuthenticationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/handle/AuthenticationInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/mapper/UserBaseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/mapper/UserBaseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/AuthService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/authConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/authConfig.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/mapper/UserBaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/mapper/UserBaseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/enums/UserEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/enums/UserEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-common/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-auth/src/test/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-auth/src/test/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/myException/ExceptionHander.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/myException/ExceptionHander.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-common/src/test/java/xyz/stxkfzx/manager/common/KfzxoaCommonApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-common/src/test/java/xyz/stxkfzx/manager/common/KfzxoaCommonApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/KfzxoaFaceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/KfzxoaFaceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/SelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/SelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/enums/WorkingEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/enums/WorkingEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/test/java/xyz/stxkfzx/manager/face/KfzxoaFaceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/test/java/xyz/stxkfzx/manager/face/KfzxoaFaceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/pojo/TUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/pojo/TUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/test/java/xyz/stxkfzx/manager/user/KfzxoaUserApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/test/java/xyz/stxkfzx/manager/user/KfzxoaUserApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,92 +49,22 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="stxkfzx-oa" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/myException/ExceptionHander.java">
+        <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/pojo/TUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="251">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#690#691#0" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#828#829#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/handle/AuthenticationInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/myException/OAException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-              <folding>
-                <element signature="e#135#136#0" expanded="true" />
-                <element signature="e#158#159#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/TestController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/KfzxoaCommonApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="e#266#267#0" expanded="true" />
-                <element signature="e#340#341#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/KfzxoaUserApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/KfzxoaFaceApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -150,6 +91,14 @@
       <find>30000</find>
       <find>TSignItem</find>
       <find>soOrderQuery</find>
+      <find>20880</find>
+      <find>@Service</find>
+      <find>com.alibaba.dubbo.config.annotation.Service</find>
+      <find>127.0.0.1</find>
+      <find>localhost</find>
+      <find>redis</find>
+      <find>xyz.stxkfzx.manager.auth.mapper</find>
+      <find>configuration</find>
       <find>23478</find>
     </findStrings>
     <replaceStrings>
@@ -168,39 +117,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/JudgeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/SelServiceImpl.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-user/pom.xml" />
-        <option value="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/consumer/MessageConsumerService.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/xin/stxkfzx/weekend/auth/mapper/UserBaseMapper.xml" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/xyz.stxkfzx.manager.auth.mapper/UserBaseMapper.xml" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/mapper/UserBaseMapper.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/test/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplicationTests.java" />
         <option value="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/TSignItem.java" />
         <option value="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/TSignItemNew.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/UserService.java" />
         <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/utils/CodecUtils.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/pojo/TUser.java" />
         <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/ManagerEnum.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/resources/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/enums/ManagerEnum.java" />
         <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/enums/WorkingEnum.java" />
         <option value="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/ExportController.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/AuthService.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/kfzxoa-face/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/controller/AuthController.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/SelController.java" />
         <option value="$PROJECT_DIR$/kfzxoa-face/src/main/resources/ipConfig.properties" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/authConfig.properties" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/config/AuthConfig.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/mapper/UserBaseMapper.xml" />
         <option value="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/enums/WorkingEnum.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/entity/JwtConstants.java" />
         <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/utils/JwtUtils.java" />
         <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/entity/UserBase.java" />
@@ -209,16 +135,39 @@
         <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/exception/AuthenticationInterceptor.java" />
         <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/enums/AuthEnum.java" />
         <option value="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/pojo/FaceResult.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/impl/AuthServiceImpl.java" />
         <option value="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/enums/UserEnum.java" />
         <option value="$PROJECT_DIR$/kfzxoa-common/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/myException/OAException.java" />
         <option value="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/TestController.java" />
         <option value="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/KfzxoaCommonApplication.java" />
         <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/KfzxoaUserApplication.java" />
-        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/handle/AuthenticationInterceptor.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/SelController.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-face/src/test/java/xyz/stxkfzx/manager/face/KfzxoaFaceApplicationTests.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-user/src/test/java/xyz/stxkfzx/manager/user/KfzxoaUserApplicationTests.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-common/src/test/java/xyz/stxkfzx/manager/common/KfzxoaCommonApplicationTests.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/UserService.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/AuthService.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/mapper/UserBaseMapper.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/mapper/UserBaseMapper.xml" />
+        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/pojo/TUser.java" />
         <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplication.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/KfzxoaFaceApplication.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/kfzxoa-face/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/UserBaseMapper.xml" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/handle/AuthenticationInterceptor.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/resources/authConfig.properties" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/src/test/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplicationTests.java" />
         <option value="$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/myException/ExceptionHander.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/impl/AuthServiceImpl.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/config/AuthConfig.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/kfzxoa-user/src/main/resources/mapper/UserMapper.xml" />
       </list>
     </option>
   </component>
@@ -238,18 +187,13 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="kfzxoa-auth" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="176" />
-    <option name="y" value="-14" />
+    <option name="x" value="286" />
+    <option name="y" value="32" />
     <option name="width" value="1024" />
     <option name="height" value="677" />
   </component>
@@ -281,70 +225,25 @@
             <path>
               <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
               <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="kfzxoa-face" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
               <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="kfzxoa-face" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
               <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="handle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-common" type="462c0819:PsiDirectoryNode" />
+              <item name="kfzxoa-face" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
               <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-common" type="462c0819:PsiDirectoryNode" />
+              <item name="kfzxoa-face" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -352,56 +251,54 @@
             <path>
               <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
               <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-common" type="462c0819:PsiDirectoryNode" />
+              <item name="kfzxoa-face" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="face" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
               <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-common" type="462c0819:PsiDirectoryNode" />
+              <item name="kfzxoa-face" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="myException" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
+              <item name="kfzxoa-face" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
+              <item name="kfzxoa-face" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
+              <item name="kfzxoa-face" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
+              <item name="kfzxoa-face" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
               <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
               <item name="kfzxoa-user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stxkfzx-oa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stxkfzx-oa" type="462c0819:PsiDirectoryNode" />
-              <item name="kfzxoa-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -419,7 +316,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/kfzxoa-common/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -429,25 +326,25 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="xyz.stxkfzx.manager.user.service" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-common\src\main\resources" />
-      <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-auth\src\main\resources" />
-      <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-auth\src\main\java\xyz\stxkfzx\manager\auth" />
-      <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-user\src\main\java\xyz\stxkfzx\manager\user" />
-      <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-user\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="xyz.stxkfzx.manager.face.pojo" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-common\src\main\java\xyz\stxkfzx\manager\common\enums" />
       <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-common" />
       <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-auth\src\main\resources\mapper" />
       <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-auth\src\main\resources\xyz.stxkfzx.manager.auth.mapper" />
       <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-auth\src\main\java\xyz\stxkfzx\manager\auth" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-face\src\main\resources\mapper" />
+      <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-common\src\main\resources" />
+      <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-auth\src\main\resources" />
+      <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-auth\src\main\java\xyz\stxkfzx\manager\auth" />
+      <recent name="D:\dev\codeDemo\kfzx\stxkfzx-oa\kfzxoa-user\src\main\java\xyz\stxkfzx\manager\user" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="xyz.stxkfzx.manager.face.pojo" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="xyz.stxkfzx.manager.user.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -466,9 +363,9 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.20865533" />
+    <option name="contentProportion" value="0.114374034" />
   </component>
-  <component name="RunManager" selected="Spring Boot.KfzxoaCommonApplication">
+  <component name="RunManager" selected="JUnit.KfzxoaAuthApplicationTests.test">
     <configuration name="KfzxoaAuthApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kfzxoa-auth" />
       <extension name="coverage">
@@ -484,7 +381,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KfzxoaAuthApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KfzxoaAuthApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kfzxoa-auth" />
       <extension name="coverage">
         <pattern>
@@ -494,7 +391,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="xyz.stxkfzx.manager.auth" />
       <option name="MAIN_CLASS_NAME" value="xyz.stxkfzx.manager.auth.KfzxoaAuthApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KfzxoaFaceApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kfzxoa-face" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="xyz.stxkfzx.manager.face.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="xyz.stxkfzx.manager.face" />
+      <option name="MAIN_CLASS_NAME" value="xyz.stxkfzx.manager.face.KfzxoaFaceApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KfzxoaUserApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kfzxoa-user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="xyz.stxkfzx.manager.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="xyz.stxkfzx.manager.user" />
+      <option name="MAIN_CLASS_NAME" value="xyz.stxkfzx.manager.user.KfzxoaUserApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -514,10 +443,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KfzxoaFaceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+    <configuration name="KfzxoaFaceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="kfzxoa-face" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="xyz.stxkfzx.manager.face.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="xyz.stxkfzx.manager.face.KfzxoaFaceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -531,17 +465,22 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.KfzxoaAuthApplicationTests.contextLoads" />
       <item itemvalue="JUnit.KfzxoaAuthApplicationTests" />
-      <item itemvalue="Spring Boot.KfzxoaFaceApplication" />
+      <item itemvalue="JUnit.KfzxoaAuthApplicationTests.test" />
       <item itemvalue="Spring Boot.KfzxoaUserApplication" />
       <item itemvalue="Spring Boot.KfzxoaCommonApplication" />
       <item itemvalue="Spring Boot.KfzxoaAuthApplication" />
+      <item itemvalue="Spring Boot.KfzxoaFaceApplication" />
+      <item itemvalue="JUnit.KfzxoaFaceApplicationTests.test" />
+      <item itemvalue="JUnit.KfzxoaUserApplicationTests.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.KfzxoaFaceApplication" />
+        <item itemvalue="JUnit.KfzxoaAuthApplicationTests.test" />
+        <item itemvalue="JUnit.KfzxoaUserApplicationTests.test" />
+        <item itemvalue="JUnit.KfzxoaFaceApplicationTests.test" />
         <item itemvalue="JUnit.KfzxoaAuthApplicationTests" />
-        <item itemvalue="JUnit.KfzxoaAuthApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
@@ -563,7 +502,10 @@
       <workItem from="1560332526036" duration="6097000" />
       <workItem from="1560477275531" duration="16746000" />
       <workItem from="1560578545199" duration="7295000" />
-      <workItem from="1560597471097" duration="7800000" />
+      <workItem from="1560597471097" duration="7992000" />
+      <workItem from="1560734533739" duration="1297000" />
+      <workItem from="1560735932115" duration="5939000" />
+      <workItem from="1560745742101" duration="18005000" />
     </task>
     <task id="LOCAL-00001" summary="use dubbo">
       <created>1559647849201</created>
@@ -607,71 +549,79 @@
       <option name="project" value="LOCAL" />
       <updated>1560517737876</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="use dubbo">
+      <created>1560605589356</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560605589356</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="KfzxoaAuthApplicationTests_contextLoads - 2019.06.12 at 18h 18m 41s.xml">
-      <configuration name="KfzxoaAuthApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="KfzxoaAuthApplicationTests_test - 2019.06.17 at 15h 21m 41s.xml">
+      <configuration name="KfzxoaAuthApplicationTests.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KfzxoaAuthApplicationTests_contextLoads - 2019.06.12 at 18h 20m 07s.xml">
-      <configuration name="KfzxoaAuthApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="KfzxoaAuthApplicationTests_test - 2019.06.17 at 16h 36m 55s.xml">
+      <configuration name="KfzxoaAuthApplicationTests.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KfzxoaAuthApplicationTests_contextLoads - 2019.06.12 at 18h 20m 41s.xml">
-      <configuration name="KfzxoaAuthApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="KfzxoaAuthApplicationTests_test - 2019.06.17 at 17h 44m 04s.xml">
+      <configuration name="KfzxoaAuthApplicationTests.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KfzxoaAuthApplicationTests_contextLoads - 2019.06.12 at 18h 23m 18s.xml">
-      <configuration name="KfzxoaAuthApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="KfzxoaAuthApplicationTests_test - 2019.06.17 at 17h 52m 16s.xml">
+      <configuration name="KfzxoaAuthApplicationTests.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KfzxoaAuthApplicationTests_contextLoads - 2019.06.12 at 18h 26m 30s.xml">
-      <configuration name="KfzxoaAuthApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="KfzxoaAuthApplicationTests_test - 2019.06.17 at 17h 53m 21s.xml">
+      <configuration name="KfzxoaAuthApplicationTests.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KfzxoaAuthApplicationTests_contextLoads - 2019.06.12 at 18h 27m 19s.xml">
-      <configuration name="KfzxoaAuthApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="KfzxoaAuthApplicationTests_test - 2019.06.17 at 17h 54m 11s.xml">
+      <configuration name="KfzxoaAuthApplicationTests.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KfzxoaAuthApplicationTests - 2019.06.12 at 18h 28m 12s.xml">
-      <configuration name="KfzxoaAuthApplicationTests" configurationId="JUnit" />
+    <history-entry file="KfzxoaAuthApplicationTests_test - 2019.06.17 at 17h 56m 02s.xml">
+      <configuration name="KfzxoaAuthApplicationTests.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KfzxoaAuthApplicationTests - 2019.06.12 at 18h 30m 15s.xml">
-      <configuration name="KfzxoaAuthApplicationTests" configurationId="JUnit" />
+    <history-entry file="KfzxoaAuthApplicationTests_test - 2019.06.17 at 18h 00m 48s.xml">
+      <configuration name="KfzxoaAuthApplicationTests.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KfzxoaAuthApplicationTests - 2019.06.12 at 18h 30m 45s.xml">
-      <configuration name="KfzxoaAuthApplicationTests" configurationId="JUnit" />
+    <history-entry file="KfzxoaAuthApplicationTests_test - 2019.06.17 at 18h 01m 23s.xml">
+      <configuration name="KfzxoaAuthApplicationTests.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="KfzxoaAuthApplicationTests - 2019.06.12 at 18h 33m 44s.xml">
-      <configuration name="KfzxoaAuthApplicationTests" configurationId="JUnit" />
+    <history-entry file="KfzxoaAuthApplicationTests_test - 2019.06.17 at 18h 02m 08s.xml">
+      <configuration name="KfzxoaAuthApplicationTests.test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103495000" />
+    <option name="totallyTimeSpent" value="128928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" order="0" visible="true" weight="0.20726173" />
+      <window_info id="Project" order="0" sideWeight="0.49886104" visible="true" weight="0.21331316" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.5011389" side_tool="true" weight="0.21331316" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32569557" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.61865795" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36988544" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49848714" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.1301059" side_tool="true" weight="0.41080198" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.1323752" side_tool="true" visible="true" weight="0.42716858" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3289689" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32569557" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.5695581" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.8698941" visible="true" weight="0.4942717" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="14" sideWeight="0.8676248" visible="true" weight="0.42716858" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.5695581" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -744,6 +694,31 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>authConfig.managerCodeList</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>user.getManagerType()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>authConfig.managerMethodList</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>AuthConfig.managerMethodList</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>method.getName()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>userMapper.selectUser(user)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -751,407 +726,381 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE.jar!/org/springframework/web/servlet/HandlerExecutionChain.class">
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/properties/JwtProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="-888">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/controller/AuthController.java">
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/test/java/xyz/stxkfzx/manager/face/KfzxoaFaceApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1464">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+        <state relative-caret-position="140">
+          <caret line="22" column="32" selection-start-line="21" selection-start-column="4" selection-end-line="22" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2088">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/SelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/JudgeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/JudgeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/config/CheckUserIsExist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/resources/ipConfig.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/resources/authConfig.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="17" selection-start-line="3" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/config/AuthConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/mapper/UserBaseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/pojo/TUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding>
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="method#toString#0;class#TUser#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/resources/mapper/UserBaseMapper.xml">
+    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/test/java/xyz/stxkfzx/manager/user/KfzxoaUserApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="9" column="71" lean-forward="true" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
+          <caret line="21" column="5" selection-start-line="14" selection-start-column="3" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/enums/WorkingEnum.java">
+    <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/test/java/xyz/stxkfzx/manager/common/KfzxoaCommonApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding>
-            <element signature="method#WorkingEnum#0;class#WorkingEnum#0" />
-            <element signature="method#WorkingEnum#1;class#WorkingEnum#0" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-2">
+          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/AuthService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="115">
+          <caret line="391" column="19" selection-start-line="391" selection-start-column="19" selection-end-line="391" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/impl/UserServiceImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        <state relative-caret-position="211">
+          <caret line="515" selection-start-line="515" selection-end-line="515" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/ExportController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.19/tomcat-embed-core-9.0.19.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="139">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/SelSignServiceImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.1.10/druid-1.1.10-sources.jar!/com/alibaba/druid/support/http/WebStatFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        <state relative-caret-position="180">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/JudgeServiceImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.1/mybatis-3.5.1-sources.jar!/org/apache/ibatis/binding/MapperProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="132">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/utils/JwtUtils.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.1/mybatis-3.5.1-sources.jar!/org/apache/ibatis/annotations/Mapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+        <state relative-caret-position="182">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/ManagerServiceImpl.java">
+    <entry file="jar://$PROJECT_DIR$/../../../java/jdk1.8.0_211/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="129">
+          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/entity/UserBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        <state relative-caret-position="153">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="3" selection-end-line="19" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/FaceServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/mapper/UserBaseMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1056">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/FaceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/FaceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/entity/JwtConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../java/jdk1.8.0_211/src.zip!/java/lang/Exception.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="113" column="43" lean-forward="true" selection-start-line="113" selection-start-column="43" selection-end-line="113" selection-end-column="43" />
+        <state relative-caret-position="20">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding>
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/myException/OaEeption.java">
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/SelSignService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="97">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/pojo/FaceResult.java">
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/controller/AuthController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="168">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/target/classes/mapper/SignItemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/handle/InterceptorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/SignItemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/UserBaseMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/enums/ManagerEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding>
-            <element signature="method#ManagerEnum#0;class#ManagerEnum#0" />
-            <element signature="method#ManagerEnum#1;class#ManagerEnum#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/enums/UserEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        <state relative-caret-position="-744">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/enums/AuthEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="198">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/handle/InterceptorConfig.java">
+    <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/enums/WorkingEnum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="72">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/impl/AuthServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3879#3880#0" expanded="true" />
-            <element signature="e#3943#3944#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/resources/application.properties">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.5.RELEASE/spring-boot-2.1.5.RELEASE.jar!/org/springframework/boot/SpringApplication.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="83">
+          <caret line="766" selection-start-line="766" selection-end-line="766" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3-sources.jar!/ch/qos/logback/core/ConsoleAppender.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE.jar!/org/springframework/web/servlet/HandlerExecutionChain.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="4" column="66" lean-forward="true" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+        <state relative-caret-position="90">
+          <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="308">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/KfzxoaFaceApplication.java">
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/resources/mapper/UserBaseMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/myException/OAException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="e#135#136#0" expanded="true" />
-            <element signature="e#158#159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/handle/AuthenticationInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+        <state relative-caret-position="152">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/KfzxoaUserApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/KfzxoaCommonApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="124">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/test/java/xyz/stxkfzx/manager/auth/KfzxoaAuthApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/resources/authConfig.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/impl/AuthServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="81" column="34" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3932#3933#0" expanded="true" />
+            <element signature="e#3989#3990#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-common/src/main/java/xyz/stxkfzx/manager/common/myException/ExceptionHander.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="234">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/config/AuthConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+          <folding>
+            <element signature="e#743#744#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/SelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/SelSignServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/ManagerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/handle/AuthenticationInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="8" column="74" lean-forward="true" selection-start-line="8" selection-start-column="74" selection-end-line="8" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/KfzxoaUserApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-auth/src/main/java/xyz/stxkfzx/manager/auth/service/AuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/KfzxoaFaceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1899">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-user/target/classes/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-888">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/pojo/TUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
           </folding>
         </state>
       </provider>

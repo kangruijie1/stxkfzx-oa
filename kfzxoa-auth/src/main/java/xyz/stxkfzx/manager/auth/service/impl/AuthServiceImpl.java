@@ -1,5 +1,6 @@
 package xyz.stxkfzx.manager.auth.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -83,16 +84,8 @@ public class AuthServiceImpl implements AuthService{
         return userBase;
     }
 
-    /**
-     * 通过id查找
-     *
-     * @param userId id
-     * @return UserBase
-     * @author ViterTian
-     * @date 2019-04-14
-     */
     @Override
-    public UserBase findUserById(Integer userId) {
-        return userBaseMapper.selectByPrimaryKey(userId);
+    public UserBase findUser(UserBase userBase) {
+       return userBaseMapper.selectUser(userBase);
     }
 }

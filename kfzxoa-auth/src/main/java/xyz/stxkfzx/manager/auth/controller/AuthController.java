@@ -7,6 +7,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import xyz.stxkfzx.manager.auth.config.PassToken;
 import xyz.stxkfzx.manager.auth.entity.UserBase;
 import xyz.stxkfzx.manager.auth.properties.JwtProperties;
 import xyz.stxkfzx.manager.auth.service.AuthService;
@@ -44,6 +45,7 @@ public class AuthController {
      * @date 2019-04-13
      */
     @PostMapping("accredit")
+    @PassToken
     public FaceResult login(String username, String password, HttpServletResponse response) {
         return authService.login(username, password, response);
     }
@@ -57,6 +59,7 @@ public class AuthController {
      * @date 2019-04-13
      */
     @GetMapping("verify")
+    @PassToken
     public FaceResult verifyUser(@RequestHeader("Authorization") String token, HttpServletResponse response) {
         try {
             return new FaceResult().ok(authService.verifyUser(token, response));
@@ -68,15 +71,4 @@ public class AuthController {
         }
     }
 
-    @GetMapping("888")
-    public void test(){
-        System.out.println("444444444444444444444444444444444444444444444444444");
-        System.out.println("444444444444444444444444444444444444444444444444444");
-        System.out.println("444444444444444444444444444444444444444444444444444");
-        System.out.println("444444444444444444444444444444444444444444444444444");
-        System.out.println("444444444444444444444444444444444444444444444444444");
-        System.out.println("444444444444444444444444444444444444444444444444444");
-        System.out.println("444444444444444444444444444444444444444444444444444");
-        System.out.println("444444444444444444444444444444444444444444444444444");
-    }
 }

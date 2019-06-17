@@ -14,7 +14,7 @@ public class SelController {
 	@Autowired
 	private SelSignService selSignService;
 
-	@RequestMapping({ "/sel/group" })
+	@GetMapping( "/sel/group" )
 	public FaceResult selDepartmentUsers(int week, String group_id) throws ParseException {
 		Map<String, Object> resultData = new HashMap<String, Object>();
 		if (week == 0) {

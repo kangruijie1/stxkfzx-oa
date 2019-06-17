@@ -36,6 +36,8 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
     private AuthService authService;
     @Autowired
     JwtProperties jwtProperties;
+    @Autowired
+    AuthConfig authConfig;
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object object) throws Exception {
@@ -65,10 +67,11 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
             logger.info("获取到PublicKey()");
             userBase = authService.verifyUser(token, httpServletResponse);
         } catch (Exception e) {
+            e.printStackTrace();
             logger.error("用户认证过期");
             throw new OAException(AuthEnum.TOKEN_IS_LOW.getMsg());
         }
-        UserBase user = authService.findUserById(userBase.getUserId());
+        UserBase user = authService.findUser(userBase);
         if (user == null) {
             logger.error("用户不存在");
             throw new OAException(UserEnum.USER_NOT_EXIST.getMsg());
@@ -80,9 +83,9 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
         }
 
         //检查是否请求的是管理员方法
-        if(AuthConfig.managerMethodList.contains(method.getName())){
+        if(authConfig.managerMethodList.contains(method.getName())){
             //检查用户是否为管理者
-            if(AuthConfig.managerCodeList.contains(user.getManagerType())){
+            if(authConfig.managerCodeList.contains(user.getManagerType())){
                 return true;
             }else{
                 logger.error("您没有权限访问此操作");

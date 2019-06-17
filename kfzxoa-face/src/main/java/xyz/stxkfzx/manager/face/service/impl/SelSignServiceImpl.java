@@ -19,7 +19,7 @@ import xyz.stxkfzx.manager.user.service.UserService;
 public class SelSignServiceImpl implements SelSignService {
 	@Autowired
 	private SignItemMapper signItemMapper;
-	@Reference(version = "1.0.0")
+	@Reference
 	private UserService userService;
 
 	@Override

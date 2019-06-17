@@ -11,6 +11,7 @@ import org.springframework.util.StringUtils;
 import xyz.stxkfzx.manager.auth.utils.CodecUtils;
 import xyz.stxkfzx.manager.common.enums.UserEnum;
 import xyz.stxkfzx.manager.common.enums.WorkingEnum;
+import xyz.stxkfzx.manager.common.myException.OAException;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.user.enums.ManagerEnum;
 import xyz.stxkfzx.manager.user.mapper.UserMapper;
@@ -46,6 +47,18 @@ public class UserServiceImpl implements UserService {
             return tUsers.get(0);
         }
         return null;
+    }
+
+    @Override
+    public TUser getTUserByUserId(Integer userId) {
+        TUser user = new TUser();
+        user.setUserId(userId);
+        List<TUser> tUsers = userMapper.selectUser(user);
+        if(!CollectionUtils.isEmpty(tUsers)){
+            return tUsers.get(0);
+        }else{
+            throw new OAException(UserEnum.USER_NOT_EXIST.getMsg());
+        }
     }
 
     @Override
@@ -86,7 +99,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<TUser> getAllTUser() {
-        return userMapper.selectUser(new TUser());
+        TUser tUser = new TUser();
+        tUser.setUsername("刘甜");
+        List<TUser> tUsers = userMapper.selectUser(tUser);
+        return tUsers;
     }
 
     @Override

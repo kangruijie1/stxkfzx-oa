@@ -27,5 +27,5 @@ import java.util.concurrent.TimeUnit;
 public interface AuthService {
     FaceResult login(String username, String password, HttpServletResponse response);
     UserBase verifyUser(String token, HttpServletResponse response);
-    UserBase findUserById(Integer userId);
+    UserBase findUser(UserBase userBase);
 }

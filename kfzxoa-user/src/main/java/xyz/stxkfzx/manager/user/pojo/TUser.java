@@ -13,7 +13,7 @@ public class TUser implements Serializable {
     private Date createTime;
     private Date updateTime;
     private Integer managerType;
-    private short status;
+    private Short status;
 
     public TUser() {
     }
@@ -26,7 +26,7 @@ public class TUser implements Serializable {
         this.managerType = managerType;
     }
 
-    public short getStatus() {
+    public Short getStatus() {
         return status;
     }
 

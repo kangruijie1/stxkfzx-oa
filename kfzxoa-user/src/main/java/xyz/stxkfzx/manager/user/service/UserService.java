@@ -26,6 +26,8 @@ public interface UserService {
      */
     TUser getTUserByUserInfo(String user_info);
 
+    TUser getTUserByUserId(Integer userId);
+
     /**
      * 添加用户
      * @param user 用户对象

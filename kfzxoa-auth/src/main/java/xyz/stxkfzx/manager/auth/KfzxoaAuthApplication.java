@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "xyz.stxkfzx.manager")
 @MapperScan("xyz.stxkfzx.manager.auth.mapper")
 @EnableDubbo
 public class KfzxoaAuthApplication {

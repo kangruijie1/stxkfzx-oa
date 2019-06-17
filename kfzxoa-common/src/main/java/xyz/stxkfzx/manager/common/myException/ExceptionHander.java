@@ -18,7 +18,7 @@ public class ExceptionHander {
         log.error("error", e);
         FaceResult faceResult = new FaceResult();
         faceResult.setMsg(e.getMessage());
-        faceResult.setStatus(23478);
+        faceResult.setStatus(500);
         return faceResult;
     }
 }

@@ -1,8 +1,6 @@
 package xyz.stxkfzx.manager.auth.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 import xyz.stxkfzx.manager.auth.entity.UserBase;
 
 /**
@@ -20,7 +18,17 @@ public interface UserBaseMapper {
      * @author ViterTian
      * @date 2019-04-13
      */
-    UserBase selectByPrimaryKey(Integer userId);
+    UserBase selectByUserId(Integer userId);
+
+    /**
+     *
+     *
+     * @param
+     * @return UserBean
+     * @author ViterTian
+     * @date 2019-04-13
+     */
+    UserBase selectUser(UserBase userBase);
 
     /**
      * 根据用户名返回用户

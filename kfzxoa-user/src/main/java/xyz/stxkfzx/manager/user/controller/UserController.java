@@ -2,6 +2,7 @@ package xyz.stxkfzx.manager.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import xyz.stxkfzx.manager.auth.config.PassToken;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
@@ -13,11 +14,13 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
+    @PassToken
     public FaceResult register(TUser user){
         return userService.addUser(user);
     }
 
     @GetMapping("/checkRepeat")
+    @PassToken
     public FaceResult checkUserName(String username) {
         Boolean is = userService.checkUsernameIsRepeat(username);
         return new FaceResult().ok(is);

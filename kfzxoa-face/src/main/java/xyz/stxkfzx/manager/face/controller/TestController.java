@@ -17,10 +17,10 @@ public class TestController {
 	private FaceService faceService;
 	@Autowired
 	private SelSignService selSignService;
-	@Reference()
+	@Reference
 	UserService userService;
 
-	@RequestMapping({ "/sel/groupUsers" })
+	@GetMapping({ "/sel/groupUsers" })
 	public void groupUsers(String group_id) throws InterruptedException {
 		selSignService.groupUsers(group_id);
 	}
