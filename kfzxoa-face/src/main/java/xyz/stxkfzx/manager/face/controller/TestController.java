@@ -2,6 +2,7 @@ package xyz.stxkfzx.manager.face.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 
+import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.face.service.*;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import xyz.stxkfzx.manager.user.service.UserService;
 @RestController
 public class TestController {
 	@Autowired
-	private FaceService faceService;
+	private SignService faceService;
 	@Autowired
 	private SelSignService selSignService;
 	@Reference
@@ -26,8 +27,9 @@ public class TestController {
 	}
 
 	@RequestMapping({ "/sel/all" })
-	public void group() {
+	public FaceResult group() {
 		List<TUser> allTUser = userService.getAllTUser();
-		System.out.println(allTUser.toString());
+		return new FaceResult().ok(allTUser);
 	}
+
 }

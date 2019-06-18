@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-@ConfigurationProperties("list")
+@ConfigurationProperties(prefix = "list")
 @PropertySource("classpath:authConfig.properties")
 public class AuthConfig {
     public List<String> managerMethodList = new ArrayList<>();

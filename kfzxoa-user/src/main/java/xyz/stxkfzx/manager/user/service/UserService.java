@@ -21,10 +21,10 @@ public interface UserService {
 
     /**
      * 根据用户名查询用户
-     * @param user_info 用户名（变量名和人脸库user_info对应）
+     * @param username 用户名（变量名和人脸库user_info对应）
      * @return 该用户
      */
-    TUser getTUserByUserInfo(String user_info);
+    TUser getTUserByUsername(String username);
 
     TUser getTUserByUserId(Integer userId);
 

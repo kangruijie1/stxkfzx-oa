@@ -66,7 +66,7 @@ public class GetWeek
     	return getTodayDate() + " 23:59:59.999";
     }
     
-    public static Timestamp getTodayTime() {
+    public static Timestamp getCurrentTime() {
         final Date date = new Date();
         final Timestamp todayTime = new Timestamp(date.getTime());
         return todayTime;

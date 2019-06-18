@@ -10,6 +10,8 @@ import java.util.Date;
 
 import org.springframework.scheduling.annotation.*;
 import xyz.stxkfzx.manager.face.pojo.TSignItem;
+import xyz.stxkfzx.manager.face.pojo.TSignItemNew;
+import xyz.stxkfzx.manager.face.utils.GetWeek;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
 
@@ -18,40 +20,39 @@ public class TimerSignout
 {
     @Autowired
     private SignItemMapper signItemMapper;
-    @Reference(version = "1.0.0")
+    @Reference()
     private UserService userService;
     
     @Scheduled(cron = "0 50 22 * * ?")
     public void test2() {
-        final Date date = new Date();
-        final Timestamp timeStamp = new Timestamp(date.getTime());
-        final String today = timeStamp.toString().split(" ")[0];
-        final String todayStart = String.valueOf(today) + " 00:00:00.000";
-        final String todayEnd = String.valueOf(today) + " 23:59:59.999";
-        final TUser userTemp = new TUser();
+        Date date = new Date();
+        Timestamp timeStamp = new Timestamp(date.getTime());
+        String today = timeStamp.toString().split(" ")[0];
+        String todayStart = GetWeek.getTodayStartDate();
+        String todayEnd = GetWeek.getTodayEndDate();
         List<TUser> userList = userService.getAllTUser();
-        for (final TUser user : userList) {
-            final int id = user.getUserId();
-            final List<TSignItem> signItemList = this.signItemMapper.selSignItem(id, todayStart, todayEnd);
+        for (TUser user : userList) {
+            int id = user.getUserId();
+            List<TSignItemNew> signItemList = this.signItemMapper.selSignItemNew(id, todayStart, todayEnd);
             if (signItemList != null) {
                 if (signItemList.size() == 0) {
                     continue;
                 }
-                if (signItemList.get(signItemList.size() - 1).getSignout() != null) {
+                if (signItemList.get(signItemList.size() - 1).getSignOutTime()!=null) {
                     continue;
                 }
-                final TSignItem signItem = signItemList.get(signItemList.size() - 1);
-                final Timestamp signinTime = signItem.getSignin();
-                final Date currentDate = new Date();
-                final Timestamp currentTime = new Timestamp(currentDate.getTime());
-                final long interval = currentTime.getTime() - signinTime.getTime();
+                TSignItemNew signItem = signItemList.get(signItemList.size() - 1);
+                Timestamp signInTime = signItem.getSignInTime();
+                Date currentDate = new Date();
+                Timestamp currentTime = new Timestamp(currentDate.getTime());
+                long interval = currentTime.getTime() - signInTime.getTime();
                 Double hour = Double.valueOf(interval / 3600000L);
                 if (hour < 1.0) {
                     continue;
                 }
-                final long minLong = signinTime.getTime() + 3600000L;
-                final Timestamp minTime = new Timestamp(minLong);
-                signItem.setSignout(minTime);
+                long minLong = signInTime.getTime() + 3600000L;
+                Timestamp minTime = new Timestamp(minLong);
+                signItem.setSignOutTime(minTime);
                 this.signItemMapper.updateSignItem(signItem, todayStart, todayEnd);
             }
         }

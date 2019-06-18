@@ -2,16 +2,19 @@ package xyz.stxkfzx.manager.face.mapper;
 
 import org.apache.ibatis.annotations.*;
 import xyz.stxkfzx.manager.face.pojo.TSignItem;
+import xyz.stxkfzx.manager.face.pojo.TSignItemNew;
 
 import java.util.*;
 
 public interface SignItemMapper
 {
-    void insertSignItem(TSignItem p0);
+    int insertSignItem(TSignItemNew item);
     
-    List<TSignItem> selSignItem(@Param("uid") int p0, @Param("startTime") String p1, @Param("endTime") final String p2);
-    
-    void updateSignItem(@Param("item") TSignItem p0, @Param("todayStart") String p1, @Param("todayEnd") final String p2);
+    List<TSignItem> selSignItem(@Param("userId") int userId, @Param("startTime") String startTime, @Param("endTime") final String endTime);
+
+    List<TSignItemNew> selSignItemNew(@Param("userId") Integer userId, @Param("startTime") String startTime, @Param("endTime") String endTime);
+
+    int updateSignItem(@Param("item") TSignItemNew item, @Param("todayStart") String todayStart, @Param("todayEnd") final String todayEnd);
     
     void deleteSignout(final int p0);
 }

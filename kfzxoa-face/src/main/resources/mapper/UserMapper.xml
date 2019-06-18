@@ -2,55 +2,55 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="xyz.stxkfzx.manager.user.mapper.UserMapper">
 
-	<resultMap id="UserResultMap" type="xyz.stxkfzx.manager.user.pojo.TUser">
-		<id column="user_id" property="userId" jdbcType="INTEGER"/>
-		<result column="department_id" property="departmentId" jdbcType="VARCHAR"/>
-		<result column="job_id" property="jobId" jdbcType="VARCHAR"/>
-		<result column="username" property="username" jdbcType="VARCHAR"/>
-		<result column="phone_num" property="phoneNum" jdbcType="VARCHAR"/>
-		<result column="password" property="password" jdbcType="VARCHAR"/>
-		<result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
-		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
-		<result column="manager_type" property="managerType" jdbcType="INTEGER"/>
-		<result column="status" property="status" jdbcType="SMALLINT"/>
-	</resultMap>
+    <resultMap id="UserResultMap" type="xyz.stxkfzx.manager.user.pojo.TUser">
+        <id column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="department_id" property="departmentId" jdbcType="VARCHAR"/>
+        <result column="job_id" property="jobId" jdbcType="VARCHAR"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="phone_num" property="phoneNum" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="manager_type" property="managerType" jdbcType="INTEGER"/>
+        <result column="status" property="status" jdbcType="SMALLINT"/>
+    </resultMap>
 
-	<sql id="User_Column_List">
+    <sql id="User_Column_List">
         user_id, department_id, job_id, username, phone_num, manager_type, status
     </sql>
 
-	<insert id="insertUser"  useGeneratedKeys="true" keyProperty="userId" >
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="userId">
 		insert into t_user(department_id, username, password, phone_num, manager_type, status)
 		values(#{departmentId}, #{username}, #{password}, #{phoneNum}, #{managerType}, #{status})
 	</insert>
 
-	<select id="selectUser" resultMap="UserResultMap" parameterType="xyz.stxkfzx.manager.user.pojo.TUser">
-		select*
-			<!--<include refid="User_Column_List"/>-->
-		 from t_user
-		<!--<where>
-			<if test="departmentId != null and departmentId != ''">
-				and department_id = #{departmentId, jdbcType=VARCHAR}
-			</if>
-			<if test="jobId != null and jobId != ''">
-				and job_id = #{jobId, jdbcType=VARCHAR}
-			</if>
-			<if test="username != null and username != ''">
-				and username = #{username, jdbcType=VARCHAR}
-			</if>
-			&lt;!&ndash;<if test="userId != null and userId != ''">
-				and user_id = #{userId, jdbcType=INTEGER}
-			</if>&ndash;&gt;
-		</where>-->
-	</select>
+    <select id="selectUser" resultMap="UserResultMap" parameterType="xyz.stxkfzx.manager.user.pojo.TUser">
+        select
+        <include refid="User_Column_List"/>
+        from t_user
+        <where>
+            <if test="departmentId != null and departmentId != ''">
+                and department_id = #{departmentId, jdbcType=VARCHAR}
+            </if>
+            <if test="jobId != null and jobId != ''">
+                and job_id = #{jobId, jdbcType=VARCHAR}
+            </if>
+            <if test="username != null and username != ''">
+                and username = #{username, jdbcType=VARCHAR}
+            </if>
+            <if test="userId != null and userId != ''">
+                and user_id = #{userId, jdbcType=INTEGER}
+            </if>
+        </where>
+    </select>
 
-	<update id="updateUser" parameterType="xyz.stxkfzx.manager.user.pojo.TUser">
-		update t_user
-		<trim prefix="set" suffixOverrides=",">
-			<if test="password != null">password = #{password}, </if>
-			<if test="phoneNum != null">phone_num = #{phoneNum}, </if>
-			<if test="managerType != null">manager_type= #{managerType}, </if>
-		</trim>
-		where username = #{username}
-	</update>
+    <update id="updateUser" parameterType="xyz.stxkfzx.manager.user.pojo.TUser">
+        update t_user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="password != null">password = #{password},</if>
+            <if test="phoneNum != null">phone_num = #{phoneNum},</if>
+            <if test="managerType != null">manager_type= #{managerType},</if>
+        </trim>
+        where username = #{username}
+    </update>
 </mapper>

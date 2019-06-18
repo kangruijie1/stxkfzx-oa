@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xyz.stxkfzx.manager.face.mapper.SignItemImgMapper">
+
+	<resultMap id="SignImgResultMap" type="xyz.stxkfzx.manager.face.pojo.TSignItemImg">
+		<id column="sign_item_img_id" property="signItemImgId" jdbcType="INTEGER"/>
+		<result column="sign_item_id" property="signItemId" jdbcType="INTEGER"/>
+		<result column="sign_item_type" property="signItemType" jdbcType="SMALLINT"/>
+		<result column="sign_item_img" property="signItemImg" jdbcType="VARCHAR"/>
+	</resultMap>
+
+	<sql id="Sign_Column_List">
+        sign_item_img_id, sign_item_id, sign_item_type, sign_item_img
+    </sql>
+
+	<insert id="insertSignItemImg" keyProperty="signItemImgId" useGeneratedKeys="true">
+		insert into t_sign_item_img(sign_item_id, sign_item_type, sign_item_img)
+		values(#{signItemId}, #{signItemType}, #{signItemImg})
+	</insert>
+</mapper>

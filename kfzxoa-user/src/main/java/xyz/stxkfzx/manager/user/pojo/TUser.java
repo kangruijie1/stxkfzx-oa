@@ -34,7 +34,7 @@ public class TUser implements Serializable {
         this.status = status;
     }
 
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 

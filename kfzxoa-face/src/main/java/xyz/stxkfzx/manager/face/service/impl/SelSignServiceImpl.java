@@ -25,8 +25,6 @@ public class SelSignServiceImpl implements SelSignService {
 	@Override
 	public List<SignItemResult> selDepartmentSignItem(int week, String group_id) throws ParseException {
 		List<SignItemResult> signItemResultList = new ArrayList<SignItemResult>();
-		TUser userTemp = new TUser();
-		userTemp.setDepartmentId(group_id);
 		List<TUser> userList = userService.getTUsersByGroupId(group_id);
 		for (TUser user : userList) {
 			SignItemResult itemResult = new SignItemResult();

@@ -9,7 +9,6 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import xyz.stxkfzx.manager.auth.config.AuthConfig;
 import xyz.stxkfzx.manager.auth.config.PassToken;
-import xyz.stxkfzx.manager.auth.config.UserLoginToken;
 import xyz.stxkfzx.manager.auth.entity.UserBase;
 import xyz.stxkfzx.manager.auth.enums.AuthEnum;
 import xyz.stxkfzx.manager.auth.properties.JwtProperties;

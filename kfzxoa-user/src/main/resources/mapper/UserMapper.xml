@@ -25,10 +25,10 @@
 	</insert>
 
 	<select id="selectUser" resultMap="UserResultMap" parameterType="xyz.stxkfzx.manager.user.pojo.TUser">
-		select*
-			<!--<include refid="User_Column_List"/>-->
+		select
+			<include refid="User_Column_List"/>
 		 from t_user
-		<!--<where>
+		<where>
 			<if test="departmentId != null and departmentId != ''">
 				and department_id = #{departmentId, jdbcType=VARCHAR}
 			</if>
@@ -38,10 +38,10 @@
 			<if test="username != null and username != ''">
 				and username = #{username, jdbcType=VARCHAR}
 			</if>
-			&lt;!&ndash;<if test="userId != null and userId != ''">
+			<if test="userId != null and userId != ''">
 				and user_id = #{userId, jdbcType=INTEGER}
-			</if>&ndash;&gt;
-		</where>-->
+			</if>
+		</where>
 	</select>
 
 	<update id="updateUser" parameterType="xyz.stxkfzx.manager.user.pojo.TUser">

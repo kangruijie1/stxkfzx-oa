@@ -78,4 +78,8 @@ public class Base64Util
         }
         return to.toString();
     }
+
+    public static String subImgBase64(String imgBase64Str){
+        return imgBase64Str.substring(imgBase64Str.indexOf(44) + 1);
+    }
 }

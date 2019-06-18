@@ -1,7 +1,6 @@
 package xyz.stxkfzx.manager.face.service.impl;
 
 import xyz.stxkfzx.manager.common.enums.GeneralEnum;
-import xyz.stxkfzx.manager.common.enums.SignEnum;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.face.service.*;
 import org.springframework.stereotype.*;

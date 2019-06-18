@@ -39,9 +39,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public TUser getTUserByUserInfo(String user_info) {
+    public TUser getTUserByUsername(String username) {
         TUser user = new TUser();
-        user.setUsername(user_info);
+        user.setUsername(username);
         List<TUser> tUsers = userMapper.selectUser(user);
         if (!CollectionUtils.isEmpty(tUsers)) {
             return tUsers.get(0);

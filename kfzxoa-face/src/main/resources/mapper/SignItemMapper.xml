@@ -1,69 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="xyz.stxkfzx.manager.face.mapper.SignItemMapper">
-	<insert id="insertSignItem">
-		insert into signitem
-		<trim prefix="(" suffix=")" suffixOverrides=",">
-			<if test="uid != 0">
-				uid,
-			</if>
-			<if test="signin != null">
-				signin,
-			</if>
-			<if test="signout != null">
-				signout,
-			</if>
-			<if test="signin_img != null">
-				signin_img,
-			</if>
-			<if test="signout_img != null">
-				signout_img,
-			</if>
-		</trim>
-		<trim prefix="values (" suffix=")" suffixOverrides=",">
-			<if test="uid != null">
-				#{uid},
-			</if>
-			<if test="signin != null">
-				#{signin},
-			</if>
-			<if test="signout != null">
-				#{signout},
-			</if>
-			<if test="signin_img != null">
-				#{signin_img},
-			</if>
-			<if test="signout_img != null">
-				#{signout_img},
-			</if>
-		</trim>
+
+	<resultMap id="SignResultMap" type="xyz.stxkfzx.manager.face.pojo.TSignItemNew">
+		<id column="sign_item_id" property="signItemId" jdbcType="INTEGER"/>
+		<id column="user_id" property="userId" jdbcType="INTEGER"/>
+		<result column="sign_in_time" property="signInTime" jdbcType="TIMESTAMP"/>
+		<result column="sign_out_time" property="signOutTime" jdbcType="TIMESTAMP"/>
+		<result column="sign_in_img_id" property="signInImgId" jdbcType="VARCHAR"/>
+		<result column="sign_out_img_id" property="signOutImgId" jdbcType="INTEGER"/>
+	</resultMap>
+
+	<sql id="Sign_Column_List">
+        sign_item_id, user_id, sign_in_time, sign_out_time, sign_in_img_id, sign_out_img_id
+    </sql>
+
+	<insert id="insertSignItem" useGeneratedKeys="true" keyProperty="signItemId" parameterType="xyz.stxkfzx.manager.face.pojo.TSignItemNew">
+		insert into t_sign_item(user_id, sign_in_time, sign_in_img_id)
+		values (#{userId}, #{signInTime}, #{signInImgId})
 	</insert>
 		
-	<select id="selSignItem" resultType="xyz.stxkfzx.manager.face.pojo.TSignItem">
-		SELECT userId, uid, signin, signout FROM signitem
+	<select id="selSignItemNew" resultMap="SignResultMap">
+		SELECT
+		<include refid="Sign_Column_List"/>
+		from t_sign_item
 		<where>
-			<if test="uid != 0">
-				uid = #{uid}
+			<if test="userId != 0">
+				user_id = #{userId}
 			</if>
 		</where>
 		and
-		UNIX_TIMESTAMP(signin) &gt;=
-		UNIX_TIMESTAMP(#{startTime})
-		AND
-		UNIX_TIMESTAMP(signin) &lt;= UNIX_TIMESTAMP(#{endTime})
-		ORDER BY ID ASC
+		UNIX_TIMESTAMP(sign_in_time)
+		between UNIX_TIMESTAMP(#{startTime}) and UNIX_TIMESTAMP(#{endTime})
+		ORDER BY user_id ASC
 	</select>
 
-	<update id="updateSignItem">
-		update signitem
-		set signout = #{item.signout},
-		signout_img = #{item.signout_img}
-		where uid = #{item.uid}
+	<update id="updateSignItem" useGeneratedKeys="true" keyProperty="item.signItemId" parameterType="xyz.stxkfzx.manager.face.pojo.TSignItemNew">
+		update t_sign_item
+		set sign_out_time = #{item.signOutTime},
+		sign_out_img_id = #{item.signOutImgId}
+		where user_id = #{item.userId}
 		and
-		UNIX_TIMESTAMP(signin) &gt;= UNIX_TIMESTAMP(#{todayStart})
+		UNIX_TIMESTAMP(sign_in_time) &gt;= UNIX_TIMESTAMP(#{todayStart})
 		AND
-		UNIX_TIMESTAMP(signin) &lt;= UNIX_TIMESTAMP(#{todayEnd})
-		ORDER BY userId DESC LIMIT 1;
+		UNIX_TIMESTAMP(sign_in_time) &lt;= UNIX_TIMESTAMP(#{todayEnd})
+		ORDER BY sign_item_id DESC LIMIT 1;
 	</update>
 	
 	<delete id="deleteSignout">

@@ -12,6 +12,13 @@ public class TSignItemImg {
     private String signItemImg;
 
     public TSignItemImg() {
+
+    }
+
+    public TSignItemImg(Integer signItemId, short signItemType, String signItemImg) {
+        this.signItemId = signItemId;
+        this.signItemType = signItemType;
+        this.signItemImg = signItemImg;
     }
 
     public Integer getSignItemImgId() {

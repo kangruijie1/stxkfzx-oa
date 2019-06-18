@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.besjon.pojo.AiFaceUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import xyz.stxkfzx.manager.common.enums.SignEnum;
 import xyz.stxkfzx.manager.common.enums.UserEnum;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
-import xyz.stxkfzx.manager.face.service.FaceService;
+import xyz.stxkfzx.manager.face.ai.pojo.AiFaceUser;
+import xyz.stxkfzx.manager.face.service.SignService;
 import xyz.stxkfzx.manager.face.service.ManagerService;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
@@ -22,11 +21,11 @@ public class ManagerServiceImpl implements ManagerService {
 	@Reference(version = "1.0.0")
 	private UserService userService;
 	@Autowired
-	private FaceService faceService;
+	private SignService faceService;
 	
 	@Override
 	public FaceResult mustSign(String user_info) {
-		TUser tUser = userService.getTUserByUserInfo(user_info);
+		TUser tUser = userService.getTUserByUsername(user_info);
 		if(tUser == null) {
 			return new FaceResult(UserEnum.USERNAME_PASSWORD_IS_FALSE);
 		}

@@ -5,10 +5,6 @@ public enum SignEnum {
 	 * 未录入人脸
 	 */
 	NOT_INPUT_FACE("请先录入人脸库！", 510),
-	/**
-	 * 未检测到人脸
-	 */
-	NO_FACE_DETECTED("未检测到人脸", 511),
 
 	/**
 	 * 打卡成功(上班)
