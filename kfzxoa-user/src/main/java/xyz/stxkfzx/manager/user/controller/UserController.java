@@ -30,6 +30,10 @@ public class UserController {
     public FaceResult updateUser(@RequestParam(value = "username", required = true) String username,
                                  @RequestParam(value = "password", required = false) String password,
                                  @RequestParam(value = "phoneNum" ,required = false) String phoneNum){
-        return userService.updateUser(username, password, phoneNum);
+        TUser user = new TUser();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setPhoneNum(phoneNum);
+        return userService.updateUser(user);
     }
 }
