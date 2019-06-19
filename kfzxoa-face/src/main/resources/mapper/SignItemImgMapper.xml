@@ -13,8 +13,11 @@
         sign_item_img_id, sign_item_id, sign_item_type, sign_item_img
     </sql>
 
-	<insert id="insertSignItemImg" keyProperty="signItemImgId" useGeneratedKeys="true">
+	<insert id="insertSignItemImg" parameterType="xyz.stxkfzx.manager.face.pojo.TSignItemImg">
 		insert into t_sign_item_img(sign_item_id, sign_item_type, sign_item_img)
 		values(#{signItemId}, #{signItemType}, #{signItemImg})
+		<selectKey resultType="java.lang.Integer" keyProperty="signItemImgId" order="AFTER">
+			SELECT LAST_INSERT_ID() AS sign_item_img_id
+		</selectKey>
 	</insert>
 </mapper>

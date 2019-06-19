@@ -1,51 +1,39 @@
 package xyz.stxkfzx.manager.face.controller;
 
+import xyz.stxkfzx.manager.auth.properties.JwtProperties;
+import xyz.stxkfzx.manager.auth.utils.JwtUtils;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
+import xyz.stxkfzx.manager.face.config.DepartmentMapping;
 import xyz.stxkfzx.manager.face.service.*;
 import org.springframework.beans.factory.annotation.*;
 import xyz.stxkfzx.manager.face.utils.*;
+
 import java.util.*;
+
 import xyz.stxkfzx.manager.face.pojo.*;
+
 import java.text.*;
+
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class SelController {
-	@Autowired
-	private SelSignService selSignService;
+    @Autowired
+    SelSignService selSignService;
 
-	@GetMapping( "/sel/group" )
-	public FaceResult selDepartmentUsers(int week, String group_id) throws ParseException {
-		Map<String, Object> resultData = new HashMap<String, Object>();
-		if (week == 0) {
-			week = GetWeek.getWeekNumber();
-		}
-		resultData.put("week", week);
-		List<SignItemResult> signItemResultList = selSignService.selDepartmentSignItem(week, group_id);
-		resultData.put("signItemList", signItemResultList);
-		setDepartment(resultData, group_id);
-		FaceResult ok = new FaceResult().ok(resultData);
-		
-		return ok;
-	}
+    @GetMapping("user/sel/week/sign")
+    public FaceResult selUserWeekSignItem(@RequestParam("username") String username,
+                                          @RequestParam("week") int week) {
+        if (week == 0) {
+            week = GetWeek.getWeekNumber();
+        }
+        List<SignItemResult> signItemResults = selSignService.selUserWeekSignItem(username, week);
+        return new FaceResult().ok(signItemResults);
+    }
 
-	public void setDepartment(Map<String, Object> map, String group_id) {
-		if (group_id.equals("0601")) {
-			map.put("department", "\u516d\u671f\u8f6f\u4ef6");
-		} else if (group_id.equals("0602")) {
-			map.put("department", "\u516d\u671fUI");
-		} else if (group_id.equals("0701")) {
-			map.put("department", "\u4e03\u671f\u8f6f\u4ef6");
-		} else if (group_id.equals("0702")) {
-			map.put("department", "\u4e03\u671fUI");
-		} else if (group_id.equals("0703")) {
-			map.put("department", "\u4e03\u671f\u786c\u4ef6");
-		} else if (group_id.equals("0801")) {
-			map.put("department", "\u516b\u671f\u8f6f\u4ef6");
-		} else if (group_id.equals("0802")) {
-			map.put("department", "\u516b\u671fUI");
-		} else if (group_id.equals("0803")) {
-			map.put("department", "\u516b\u671f\u786c\u4ef6");
-		}
-	}
+    @GetMapping("user/sel/today/sign")
+    public FaceResult selUserTodaySignItem(@RequestParam("username") String username) {
+        List<SignItemResult> signItemResults = selSignService.selUserTodaySignItem(username);
+        return new FaceResult().ok(signItemResults);
+    }
 }

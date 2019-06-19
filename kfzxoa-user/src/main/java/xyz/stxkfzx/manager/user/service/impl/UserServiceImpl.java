@@ -31,9 +31,9 @@ public class UserServiceImpl implements UserService {
     UserMapper userMapper;
 
     @Override
-    public List<TUser> getTUsersByGroupId(String group_id) {
+    public List<TUser> getTUsersByDepartmentId(String departmentId) {
         TUser user = new TUser();
-        user.setDepartmentId(group_id);
+        user.setDepartmentId(departmentId);
         List<TUser> tUsers = userMapper.selectUser(user);
         return tUsers;
     }

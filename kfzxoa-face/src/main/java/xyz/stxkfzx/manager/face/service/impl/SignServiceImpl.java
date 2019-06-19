@@ -1,11 +1,15 @@
 package xyz.stxkfzx.manager.face.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.CollectionUtils;
+import xyz.stxkfzx.manager.auth.enums.AuthEnum;
 import xyz.stxkfzx.manager.common.enums.SignEnum;
+import xyz.stxkfzx.manager.common.enums.WorkingEnum;
 import xyz.stxkfzx.manager.common.myException.OAException;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
-import xyz.stxkfzx.manager.face.ai.pojo.AiBase;
+import xyz.stxkfzx.manager.face.ai.pojo.AiSearchBase;
 import xyz.stxkfzx.manager.face.ai.pojo.AiFaceUser;
 import xyz.stxkfzx.manager.face.ai.pojo.AiFaceUserList;
 import xyz.stxkfzx.manager.face.enums.FaceExceptionEnum;
@@ -27,6 +31,7 @@ import xyz.stxkfzx.manager.user.service.UserService;
 
 @Service
 public class SignServiceImpl implements SignService {
+    private final Logger logger = LoggerFactory.getLogger(SignServiceImpl.class);
     @Reference
     private UserService userService;
     @Autowired
@@ -45,7 +50,7 @@ public class SignServiceImpl implements SignService {
         String resultStr = reqSearchFaceDb.req();
 
         //转换结果集
-        AiBase searchResult = JsonUtils.jsonToPojo(resultStr, AiBase.class);
+        AiSearchBase searchResult = JsonUtils.jsonToPojo(resultStr, AiSearchBase.class);
 
         // 未检测到人脸，抛出异常
         if (searchResult.getError_code() == FaceExceptionEnum.NOT_CHECK_FACE.getErrorCode()) {
@@ -84,6 +89,15 @@ public class SignServiceImpl implements SignService {
                 // 获取此用户名查询出用户id
                 String username = aiFaceUser.getUser_info();
                 TUser user = userService.getTUserByUsername(username);
+                if (!user.getStatus().equals(WorkingEnum.IN_THE_DEPARTMENT.getWorkingStatusCode())){
+                    logger.error("用户已退部或者未激活");
+                    FaceResult faceResult = new FaceResult();
+                    faceResult.setData(username);
+                    faceResult.setMsg(AuthEnum.USER_NOT_IN_DEPARTMENT.getMsg());
+                    faceResult.setStatus(AuthEnum.USER_NOT_IN_DEPARTMENT.getCode());
+                    resultDataList.add(faceResult);
+                    continue;
+                }
                 int id = user.getUserId();
                 // 查该用户今天打卡记录
                 List<TSignItemNew> signItems = signItemMapper.selSignItemNew(id, todayStart, todayEnd);
@@ -97,8 +111,8 @@ public class SignServiceImpl implements SignService {
                     //插入图片
                     TSignItemImg signItemImg = new TSignItemImg(id, ImgEnum.SIGN_IN.getSignItemType(), imgBase64);
                     // 返回图片id
-                    int signItemImgId = signItemImgMapper.insertSignItemImg(signItemImg);
-                    item.setSignInImgId(signItemImgId);
+                    int execute = signItemImgMapper.insertSignItemImg(signItemImg);
+                    item.setSignInImgId(signItemImg.getSignItemImgId());
                     item.setSignOutImgId(0);
                     int i = signItemMapper.insertSignItem(item);
                     if(i != 0){
@@ -117,8 +131,8 @@ public class SignServiceImpl implements SignService {
                     //插入图片
                     TSignItemImg signItemImg = new TSignItemImg(id, ImgEnum.SIGN_OUT.getSignItemType(), imgBase64);
                     // 返回图片id
-                    int signItemImgId = signItemImgMapper.insertSignItemImg(signItemImg);
-                    item.setSignOutImgId(signItemImgId);
+                    int execute = signItemImgMapper.insertSignItemImg(signItemImg);
+                    item.setSignOutImgId(signItemImg.getSignItemImgId());
                     int i = signItemMapper.updateSignItem(item, todayStart, todayEnd);
                     if(i != 0){
                         FaceResult faceResult = new FaceResult(username, SignEnum.SIGN_OUT_SUCCESS);

@@ -1,6 +1,6 @@
 package xyz.stxkfzx.manager.face.pojo;
 
-public class Group extends FaceBasic
+public class Group
 {
     private GroupResult result;
     
@@ -8,11 +8,9 @@ public class Group extends FaceBasic
     }
     
     public Group(final String error_code, final String error_msg, final String log_id, final String timestamp, final String cached) {
-        super(error_code, error_msg, log_id, timestamp, cached);
     }
     
     public Group(final String error_code, final String error_msg, final String log_id, final String timestamp, final String cached, final GroupResult result) {
-        super(error_code, error_msg, log_id, timestamp, cached);
         this.result = result;
     }
     
@@ -24,7 +22,4 @@ public class Group extends FaceBasic
         this.result = result;
     }
     
-    public String toString() {
-        return "Group [result=" + this.result + "]";
-    }
 }

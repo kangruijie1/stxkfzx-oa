@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-@ConfigurationProperties("parm")
+@ConfigurationProperties("search")
 @PropertySource("classpath:reqParmConfig/searchFaceDbConfig.properties")
 public class ReqSearchFaceDb {
 

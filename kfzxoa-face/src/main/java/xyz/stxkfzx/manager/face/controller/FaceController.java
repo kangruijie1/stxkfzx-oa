@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import xyz.stxkfzx.manager.face.utils.Base64Util;
 
 @RestController
-public class SignController {
+public class FaceController {
     @Autowired
     private SignService signService;
 
@@ -26,4 +26,9 @@ public class SignController {
 
         return result;
     }
+
+    /*@PostMapping("user/add/face")
+    public FaceResult addFace(@RequestParam(""))*/
+
+
 }

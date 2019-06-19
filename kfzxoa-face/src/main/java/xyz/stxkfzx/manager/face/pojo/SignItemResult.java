@@ -4,35 +4,35 @@ import java.util.*;
 
 public class SignItemResult
 {
-    private String user_info;
-    private Map<String, Object> weekMap;
+    private String username;
+    private Map<String, Double> dayMap;
     
     public SignItemResult() {
     }
     
-    public SignItemResult(final String user_info, final Map<String, Object> weekMap) {
-        this.user_info = user_info;
-        this.weekMap = weekMap;
+    public SignItemResult(final String username, final Map<String, Double> dayMap) {
+        this.username = username;
+        this.dayMap = dayMap;
     }
     
-    public String getUser_info() {
-        return this.user_info;
+    public String getUsername() {
+        return this.username;
     }
     
-    public void setUser_info(final String user_info) {
-        this.user_info = user_info;
+    public void setUsername(final String username) {
+        this.username = username;
     }
     
-    public Map<String, Object> getWeekMap() {
-        return this.weekMap;
+    public Map<String, Double> getDayMap() {
+        return this.dayMap;
     }
     
-    public void setWeekMap(final Map<String, Object> weekMap) {
-        this.weekMap = weekMap;
+    public void setDayMap(final Map<String, Double> dayMap) {
+        this.dayMap = dayMap;
     }
     
     @Override
     public String toString() {
-        return "SignItemResult [user_info=" + this.user_info + ", weekMap=" + this.weekMap + "]";
+        return "SignItemResult [username=" + this.username + ", dayMap=" + this.dayMap + "]";
     }
 }

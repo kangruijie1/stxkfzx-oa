@@ -39,14 +39,14 @@ public class ExportController {
 		if (selGroupSignItem != null && selGroupSignItem.size() > 0) {
 			for (SignItemResult signItemResult : selGroupSignItem) {
 				Map<String, Object> item = new LinkedHashMap<String, Object>();
-				item.put("姓名", signItemResult.getUser_info());
-				item.put("周一", signItemResult.getWeekMap().get("week1"));
-				item.put("周二", signItemResult.getWeekMap().get("week2"));
-				item.put("周三", signItemResult.getWeekMap().get("week3"));
-				item.put("周四", signItemResult.getWeekMap().get("week4"));
-				item.put("周五", signItemResult.getWeekMap().get("week5"));
-				item.put("周六", signItemResult.getWeekMap().get("week6"));
-				item.put("周日", signItemResult.getWeekMap().get("week7"));
+				item.put("姓名", signItemResult.getUsername());
+				item.put("周一", signItemResult.getDayMap().get("week1"));
+				item.put("周二", signItemResult.getDayMap().get("week2"));
+				item.put("周三", signItemResult.getDayMap().get("week3"));
+				item.put("周四", signItemResult.getDayMap().get("week4"));
+				item.put("周五", signItemResult.getDayMap().get("week5"));
+				item.put("周六", signItemResult.getDayMap().get("week6"));
+				item.put("周日", signItemResult.getDayMap().get("week7"));
 				resultList.add(item);
 			}
 		}

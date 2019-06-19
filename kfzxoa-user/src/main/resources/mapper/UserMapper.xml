@@ -48,6 +48,7 @@
 		update t_user
 		<trim prefix="set" suffixOverrides=",">
 			<if test="password != null">password = #{password}, </if>
+			<if test="jobId != null">job_id = #{jobId}, </if>
 			<if test="phoneNum != null">phone_num = #{phoneNum}, </if>
 			<if test="managerType != null">manager_type= #{managerType}, </if>
 		</trim>

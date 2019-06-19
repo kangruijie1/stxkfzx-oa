@@ -18,7 +18,7 @@ import xyz.stxkfzx.manager.user.service.UserService;
 @Service
 public class ManagerServiceImpl implements ManagerService {
 
-	@Reference(version = "1.0.0")
+	@Reference
 	private UserService userService;
 	@Autowired
 	private SignService faceService;
@@ -29,7 +29,7 @@ public class ManagerServiceImpl implements ManagerService {
 		if(tUser == null) {
 			return new FaceResult(UserEnum.USERNAME_PASSWORD_IS_FALSE);
 		}
-		List<AiFaceUser> aiFaceUserList = new ArrayList<AiFaceUser>();
+		List<AiFaceUser> aiFaceUserList = new ArrayList<>();
 		AiFaceUser user = new AiFaceUser();
 		user.setGroup_id(tUser.getDepartmentId());
 		user.setUser_id(tUser.getJobId());

@@ -8,10 +8,10 @@ import java.util.List;
 public interface UserService {
     /**
      * 根据部门id查询用户
-     * @param group_id 部门id
+     * @param departmentId 部门id
      * @return 该部门所有用户
      */
-    List<TUser> getTUsersByGroupId(String group_id);
+    List<TUser> getTUsersByDepartmentId(String departmentId);
 
     /**
      * 获取所有用户
