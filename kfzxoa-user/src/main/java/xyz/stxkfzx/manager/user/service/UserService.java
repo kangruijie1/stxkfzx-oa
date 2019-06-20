@@ -44,11 +44,8 @@ public interface UserService {
 
     /**
      * 更新用户密码或手机号
-     *
-     * @param username
-     * @param password 密码
-     * @param phoneNum 手机号
+     * @param user 对象
      * @return FaceResult
      */
-    FaceResult updateUser(String username, String password, String phoneNum);
+    FaceResult updateUser(TUser user);
 }

@@ -114,18 +114,13 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public FaceResult updateUser(String username, String password, String phoneNum) {
-        TUser user = new TUser();
-
-        if(!StringUtils.isEmpty(password)){
+    public FaceResult updateUser(TUser user) {
+        if(!StringUtils.isEmpty(user.getPassword())){
             // 生成一段盐值
-            String salt = CodecUtils.generateSalt(username);
+            String salt = CodecUtils.generateSalt(user.getUsername());
             // 对密码进行加密
-            user.setPassword(CodecUtils.shaHex(password, null));
+            user.setPassword(CodecUtils.shaHex(user.getPassword(), null));
         }
-
-        user.setUsername(username);
-        user.setPhoneNum(phoneNum);
 
         int i = userMapper.updateUser(user);
 
