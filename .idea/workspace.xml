@@ -2,74 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3fda57f-7f4e-4dc3-a76a-38a78691b4f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiAddFaceBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiAddFaceResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiSearchBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiSelAllGroupBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiSelAllGroupResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiSelAllUserIdBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiSelAllUserIdResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiSelUserInfoBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiSelUserInfoResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/config/DepartmentMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/config/IsKfzxIpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/SignItemResultVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/request/ReqAddFace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/request/ReqSelAllGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/request/ReqSelAllUserId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/request/ReqSelUserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/FaceDbService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/FaceDbServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/config/departmentConfig.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/reqParmConfig/addFaceConfig.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/reqParmConfig/selAllGroupConfig.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/reqParmConfig/selAllUserIdConfig.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/reqParmConfig/selUserInfoConfig.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/test/java/xyz/stxkfzx/manager/face/FaceDbServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kfzxoa-face/src/test/java/xyz/stxkfzx/manager/face/GetWeekTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/ai/pojo/AiSearchResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/ExportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/ExportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/SelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/SelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/SignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/controller/FaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/faceDbOperation/FaceAdd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/faceDbOperation/FaceSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/faceDbOperation/FaceUserInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/faceDbOperation/GetGroup.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/faceDbOperation/GetGroups.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/faceDbOperation/GetUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/mapper/SignItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/mapper/SignItemMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/FaceAddResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/FaceBasic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/FaceUserResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/FaceUserResultFace.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/FaceUserResultFaceLocaltion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/FaceUserResultFaceUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/FaceUserResultUserList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/FaceUserResultUserListFinal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/Groups.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/Groups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/SignItemResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/SignItemResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/SignItemResultInterval.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/pojo/SignResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/request/ReqSearchFaceDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/request/ReqSearchFaceDb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/SelSignService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/SelSignService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/JudgeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/JudgeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/ManagerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/ManagerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/SelSignServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/SelSignServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/SignServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/service/impl/SignServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/utils/FileUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/utils/GetWeek.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/utils/GetWeek.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/ipConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/config/ipConfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/SignItemImgMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/mapper/SignItemImgMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/reqParmConfig/searchFaceDbConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/main/resources/reqParmConfig/searchFaceDbConfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-face/src/test/java/xyz/stxkfzx/manager/face/ReqFaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-face/src/test/java/xyz/stxkfzx/manager/face/ReqFaceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/java/xyz/stxkfzx/manager/user/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kfzxoa-user/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kfzxoa-user/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -105,32 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/resources/reqParmConfig/selAllUserIdConfig.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/request/ReqSelAllUserId.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/test/java/xyz/stxkfzx/manager/face/ReqFaceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="184">
+              <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
               <folding>
                 <element signature="e#1367#1368#0" expanded="true" />
                 <element signature="e#1430#1431#0" expanded="true" />
@@ -985,14 +897,14 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.KfzxoaUserApplication" />
-      <item itemvalue="Spring Boot.KfzxoaCommonApplication" />
-      <item itemvalue="Spring Boot.KfzxoaAuthApplication" />
-      <item itemvalue="Spring Boot.KfzxoaFaceApplication" />
       <item itemvalue="JUnit.ReqFaceTest.testGetAllUserId" />
       <item itemvalue="JUnit.FaceDbServiceTest.test" />
       <item itemvalue="JUnit.ReqFaceTest.testAddFace" />
       <item itemvalue="JUnit.ReqFaceTest.testSelUserInfo" />
+      <item itemvalue="Spring Boot.KfzxoaUserApplication" />
+      <item itemvalue="Spring Boot.KfzxoaCommonApplication" />
+      <item itemvalue="Spring Boot.KfzxoaAuthApplication" />
+      <item itemvalue="Spring Boot.KfzxoaFaceApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -1027,7 +939,7 @@
       <workItem from="1560735932115" duration="5939000" />
       <workItem from="1560745742101" duration="18261000" />
       <workItem from="1560824209478" duration="24909000" />
-      <workItem from="1560908046283" duration="33705000" />
+      <workItem from="1560908046283" duration="33980000" />
     </task>
     <task id="LOCAL-00001" summary="use dubbo">
       <created>1559647849201</created>
@@ -1092,19 +1004,17 @@
       <option name="project" value="LOCAL" />
       <updated>1560866777604</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="use dubbo">
+      <created>1560949257814</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560949257814</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FaceDbServiceTest_test - 2019.06.19 at 18h 40m 38s.xml">
-      <configuration name="FaceDbServiceTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ReqFaceTest_testAddFace - 2019.06.19 at 18h 59m 41s.xml">
-      <configuration name="ReqFaceTest.testAddFace" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ReqFaceTest_testAddFace - 2019.06.19 at 19h 02m 04s.xml">
-      <configuration name="ReqFaceTest.testAddFace" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ReqFaceTest_testAddFace - 2019.06.19 at 19h 41m 46s.xml">
       <configuration name="ReqFaceTest.testAddFace" configurationId="JUnit" />
     </history-entry>
@@ -1126,12 +1036,22 @@
     <history-entry file="ReqFaceTest_testGetAllUserId - 2019.06.19 at 20h 55m 22s.xml">
       <configuration name="ReqFaceTest.testGetAllUserId" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ReqFaceTest_testGetAllUserId - 2019.06.19 at 20h 56m 46s.xml">
+      <configuration name="ReqFaceTest.testGetAllUserId" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ReqFaceTest_testGetAllUserId - 2019.06.19 at 20h 58m 52s.xml">
+      <configuration name="ReqFaceTest.testGetAllUserId" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ReqFaceTest_testGetAllUserId - 2019.06.19 at 20h 59m 14s.xml">
+      <configuration name="ReqFaceTest.testGetAllUserId" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187798000" />
+    <option name="totallyTimeSpent" value="188073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" order="0" sideWeight="0.49886104" visible="true" weight="0.2193646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1143,14 +1063,14 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49848714" weight="0.32569557" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6815431" visible="true" weight="0.34860885" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848714" weight="0.39934534" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6815431" weight="0.34860885" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4977307" visible="true" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49848714" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.3184569" side_tool="true" visible="true" weight="0.34860885" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50226927" side_tool="true" weight="0.39934534" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3289689" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.48789713" weight="0.32569557" />
@@ -1241,6 +1161,11 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>base.getResult().getUser_id_list().size() != 0</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>departmentMapping.getMap()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -1277,11 +1202,6 @@
       </expression>
       <expression>
         <expression-string>AuthConfig.managerMethodList</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>method.getName()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -1730,6 +1650,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/request/ReqSelAllUserId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/resources/reqParmConfig/selAllUserIdConfig.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -1739,23 +1669,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/test/java/xyz/stxkfzx/manager/face/ReqFaceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="184">
+          <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
           <folding>
             <element signature="e#1367#1368#0" expanded="true" />
             <element signature="e#1430#1431#0" expanded="true" />
             <element signature="e#44749#44750#0" expanded="true" />
             <element signature="e#44796#44797#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kfzxoa-face/src/main/java/xyz/stxkfzx/manager/face/request/ReqSelAllUserId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
