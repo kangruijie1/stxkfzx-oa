@@ -23,11 +23,10 @@
                 and username = #{username, jdbcType=VARCHAR}
             </if>
             <if test="userId != null and userId != ''">
-                and user_id = #{username, jdbcType=INTEGER}
+                and user_id = #{userId, jdbcType=INTEGER}
             </if>
         </where>
     </select>
-
 
     <select id="selectByUsername" resultMap="BaseResultMap" parameterType="java.lang.String">
         select

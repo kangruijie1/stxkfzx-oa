@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import xyz.stxkfzx.manager.face.mapper.SignItemMapper;
 import xyz.stxkfzx.manager.face.pojo.TSignItemNew;
-import xyz.stxkfzx.manager.face.utils.GetWeek;
+import xyz.stxkfzx.manager.common.utils.GetWeek;
 
 import java.util.List;
 

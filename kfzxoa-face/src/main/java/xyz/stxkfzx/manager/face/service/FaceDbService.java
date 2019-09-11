@@ -1,6 +1,9 @@
 package xyz.stxkfzx.manager.face.service;
 
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
+import xyz.stxkfzx.manager.face.ai.pojo.AiFaceUser;
+
+import java.util.List;
 
 public interface FaceDbService {
     /**
@@ -18,4 +21,11 @@ public interface FaceDbService {
      * @return 结果
      */
     FaceResult addFace(String img, String departmentId, String username);
+
+    /**
+     * 搜索人脸库
+     * @param imgBase64 图片编码
+     * @return 识别出的人脸结果集
+     */
+    List<AiFaceUser> searchFaceDb(String imgBase64);
 }

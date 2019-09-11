@@ -1,18 +1,13 @@
 package xyz.stxkfzx.manager.face.controller;
 
-import xyz.stxkfzx.manager.auth.properties.JwtProperties;
-import xyz.stxkfzx.manager.auth.utils.JwtUtils;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
-import xyz.stxkfzx.manager.face.config.DepartmentMapping;
+import xyz.stxkfzx.manager.common.utils.GetWeek;
 import xyz.stxkfzx.manager.face.service.*;
 import org.springframework.beans.factory.annotation.*;
-import xyz.stxkfzx.manager.face.utils.*;
 
 import java.util.*;
 
 import xyz.stxkfzx.manager.face.pojo.*;
-
-import java.text.*;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +20,7 @@ public class SelController {
     public FaceResult selUserWeekSignItem(@RequestParam("username") String username,
                                           @RequestParam("week") int week) {
         if (week == 0) {
-            week = GetWeek.getWeekNumber();
+            week = GetWeek.getHowWeek();
         }
         List<SignItemResult> signItemResults = selSignService.selUserWeekSignItem(username, week);
         return new FaceResult().ok(signItemResults);

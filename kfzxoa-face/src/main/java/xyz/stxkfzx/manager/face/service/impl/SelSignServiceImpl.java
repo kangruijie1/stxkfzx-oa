@@ -2,11 +2,11 @@ package xyz.stxkfzx.manager.face.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import org.springframework.util.CollectionUtils;
+import xyz.stxkfzx.manager.common.utils.GetWeek;
 import xyz.stxkfzx.manager.face.service.*;
 import org.springframework.stereotype.*;
 import org.springframework.beans.factory.annotation.*;
 import xyz.stxkfzx.manager.face.mapper.*;
-import xyz.stxkfzx.manager.face.utils.*;
 
 import java.util.*;
 
@@ -78,17 +78,6 @@ public class SelSignServiceImpl implements SelSignService {
     }
 
     @Override
-    public List<SignItemResult> selDepartmentSignItem(int week, String departmentId){
-        //查询部门所有用户
-        List<TUser> userList = userService.getTUsersByDepartmentId(departmentId);
-        // 获取此周的起始和结束日期
-        String startTime = GetWeek.getWeekStartEndDate(week).get(0);
-        String endTime = GetWeek.getWeekStartEndDate(week).get(1);
-        //查询打卡记录
-        return selSignItem(startTime, endTime, userList);
-    }
-
-    @Override
     public List<SignItemResult> selUserTodaySignItem(String username){
         List<TUser> userList = new ArrayList<>();
         TUser user = userService.getTUserByUsername(username);
@@ -112,49 +101,11 @@ public class SelSignServiceImpl implements SelSignService {
         return selSignItem(startTime, endTime, userList);
     }
 
-    public void selFaceGroupInsertUsers(String group_id) throws InterruptedException {
-       /* Group group = GetGroup.getUsers(group_id);
-        List<String> user_id_list = group.getResult().getUser_id_list();
-        for (final String user_id : user_id_list) {
-            TUser user = new TUser();
-            Thread.sleep(500L);
-            FaceUserResultUserList faceUserResultUserList = FaceUserInfo.get(group_id, user_id);
-            String user_info = faceUserResultUserList.getResult().getUser_list().get(0).getUser_info();
-            user.setDepartmentId(group_id);
-            user.setJobId(user_id);
-            user.setUsername(user_info);
-            userService.addUser(user);
-        }*/
-    }
-
     @Override
-    public List<Map<String, String>> exportInfo(int week, String group_id) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public void groupUsers(String group_id) {
-       /* Group users = GetGroup.getUsers(group_id);
-        List<String> user_id_list = users.getResult().getUser_id_list();
-        List<TUser> userList = new ArrayList<TUser>();
-        for (int i = 1; i <= user_id_list.size(); ++i) {
-            TUser user = new TUser();
-            try {
-                Thread.sleep(500L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            FaceUserResultUserList faceUserResultUserList = FaceUserInfo.get(group_id, Integer.toString(i));
-            user.setJobId(Integer.toString(i));
-            String user_info = faceUserResultUserList.getResult().getUser_list().get(0).getUser_info();
-            user.setDepartmentId(group_id);
-            user.setUsername(user_info);
-            userList.add(user);
-        }
-        for (TUser user : userList) {
-            System.out.println(user);
-
-        }*/
+    public List<SignItemResult> selDepartmentSignItem(String startTime, String endTime, String departmentId) {
+        //查询部门所有用户
+        List<TUser> userList = userService.getTUsersByDepartmentId(departmentId);
+        //查询打卡记录
+        return selSignItem(startTime, endTime, userList);
     }
 }

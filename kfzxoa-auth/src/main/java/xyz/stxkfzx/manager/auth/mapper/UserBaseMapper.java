@@ -8,7 +8,6 @@ import xyz.stxkfzx.manager.auth.entity.UserBase;
  * @version V1.0
  * @date 2019/4/13
  */
-@Component
 public interface UserBaseMapper {
     /**
      * 根据主键返回UserBean

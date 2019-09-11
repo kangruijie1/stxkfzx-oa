@@ -2,6 +2,7 @@ package xyz.stxkfzx.manager.user.service;
 
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.user.pojo.TUser;
+import xyz.stxkfzx.manager.user.vo.GetAllUserRes;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public interface UserService {
      * 获取所有用户
      * @return 用户List
      */
-    List<TUser> getAllTUser();
+    List<GetAllUserRes> getAllTUser();
 
     /**
      * 根据用户名查询用户

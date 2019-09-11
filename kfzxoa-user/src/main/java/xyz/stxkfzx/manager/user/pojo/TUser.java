@@ -14,8 +14,21 @@ public class TUser implements Serializable {
     private Date updateTime;
     private Integer managerType;
     private Short status;
+    private String iconUrl;
 
     public TUser() {
+    }
+
+    public void setStatus(Short status) {
+        this.status = status;
+    }
+
+    public String getIconUrl() {
+        return iconUrl;
+    }
+
+    public void setIconUrl(String iconUrl) {
+        this.iconUrl = iconUrl;
     }
 
     public Integer getManagerType() {
@@ -111,6 +124,7 @@ public class TUser implements Serializable {
                 ", updateTime=" + updateTime +
                 ", managerType=" + managerType +
                 ", status=" + status +
+                ", iconUrl='" + iconUrl + '\'' +
                 '}';
     }
 }

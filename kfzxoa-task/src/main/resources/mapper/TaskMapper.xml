@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xyz.stxkfzx.manager.task.mapper.TaskMapper">
+
+    <resultMap id="TaskResultMap" type="xyz.stxkfzx.manager.task.pojo.TTask">
+        <id column="task_id" property="taskId" jdbcType="INTEGER"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+        <result column="create_user_id" property="createUserId" jdbcType="INTEGER"/>
+        <result column="close_time" property="closeTime" jdbcType="TIMESTAMP"/>
+        <result column="remind_time" property="remindTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Task_Column_List">
+        content, create_user_id, close_time, remind_time
+    </sql>
+
+    <insert id="insertTTask" useGeneratedKeys="true" keyProperty="taskId">
+		insert into t_task(<include refid="Task_Column_List"/>)
+		values(#{content}, #{createUserId}, #{closeTime}, #{remindTime})
+        <selectKey resultType="java.lang.Integer" keyProperty="taskId" order="AFTER">
+            SELECT LAST_INSERT_ID() AS task_id
+        </selectKey>
+	</insert>
+
+    <select id="selTTask" resultMap="TaskResultMap" parameterType="xyz.stxkfzx.manager.task.pojo.TTask">
+        select task_id, <include refid="Task_Column_List"/>
+        from t_task
+        <where>
+            <if test="taskId != null and taskId != 0">
+                and task_id = #{taskId, jdbcType=VARCHAR}
+            </if>
+            <if test="createUserId != null and createUserId != 0">
+                and create_user_id = #{createUserId, jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+
+    <update id="updateTTask" parameterType="xyz.stxkfzx.manager.task.pojo.TTask">
+        update t_task
+        <trim prefix="set" suffixOverrides=",">
+            <if test="content != null">content = #{content, jdbcType=VARCHAR},</if>
+            <if test="closeTime != null">close_time = #{closeTime, jdbcType=TIMESTAMP},</if>
+            <if test="remindTime != null">remind_time= #{remindTime, jdbcType=TIMESTAMP},</if>
+        </trim>
+        where task_id = #{taskId}
+    </update>
+
+    <delete id="deleteTTask" >
+        delete from t_task where task_id = #{xxx}
+    </delete>
+</mapper>

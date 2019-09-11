@@ -1,11 +1,15 @@
 package xyz.stxkfzx.manager.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import xyz.stxkfzx.manager.auth.config.PassToken;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
+import xyz.stxkfzx.manager.user.vo.GetAllUserRes;
+
+import java.util.List;
 
 @RestController
 public class UserController {
@@ -35,5 +39,11 @@ public class UserController {
         user.setPassword(password);
         user.setPhoneNum(phoneNum);
         return userService.updateUser(user);
+    }
+
+    @GetMapping("common/user/get/all")
+    public FaceResult getAllUser(){
+        List<GetAllUserRes> res = userService.getAllTUser();
+        return new FaceResult().ok(res);
     }
 }

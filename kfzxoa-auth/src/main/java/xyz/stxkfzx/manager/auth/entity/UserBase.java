@@ -1,21 +1,20 @@
 package xyz.stxkfzx.manager.auth.entity;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
- * 本类只用于封装与 Token 部分相关的实体，故只包含了四个基本属性
  *
  * @author VicterTian
  * @version V1.0
  * @date 2019/4/13
  */
-@SuppressWarnings("all")
-public class UserBase implements Serializable {
+public class UserBase implements Serializable{
     private Integer userId;
     private String username;
     private String password;
-    private Date createTime;
+    private Timestamp createTime;
     private Integer managerType;
     private Short status;
 
@@ -67,7 +66,7 @@ public class UserBase implements Serializable {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(Timestamp createTime) {
         this.createTime = createTime;
     }
 

@@ -1,11 +1,12 @@
 package xyz.stxkfzx.manager.user.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 
 import java.util.List;
 
-@Component
+@Mapper
 public interface UserMapper
 {
     int insertUser(TUser tUser);

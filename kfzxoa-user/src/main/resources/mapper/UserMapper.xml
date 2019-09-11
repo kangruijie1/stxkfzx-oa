@@ -13,6 +13,7 @@
 		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
 		<result column="manager_type" property="managerType" jdbcType="INTEGER"/>
 		<result column="status" property="status" jdbcType="SMALLINT"/>
+		<result column="icon_url" property="iconUrl" jdbcType="VARCHAR"/>
 	</resultMap>
 
 	<sql id="User_Column_List">
@@ -20,8 +21,8 @@
     </sql>
 
 	<insert id="insertUser"  useGeneratedKeys="true" keyProperty="userId" >
-		insert into t_user(department_id, username, password, phone_num, manager_type, status)
-		values(#{departmentId}, #{username}, #{password}, #{phoneNum}, #{managerType}, #{status})
+		insert into t_user(department_id, username, password, phone_num, manager_type, status, icon_url)
+		values(#{departmentId}, #{username}, #{password}, #{phoneNum}, #{managerType}, #{status}, #{iconUrl})
 	</insert>
 
 	<select id="selectUser" resultMap="UserResultMap" parameterType="xyz.stxkfzx.manager.user.pojo.TUser">

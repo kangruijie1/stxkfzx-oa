@@ -21,11 +21,6 @@ public class TestController {
 	@Reference
 	UserService userService;
 
-	@GetMapping({ "/sel/groupUsers" })
-	public void groupUsers(String group_id) throws InterruptedException {
-		selSignService.groupUsers(group_id);
-	}
-
 	@RequestMapping({ "/sel/all" })
 	public FaceResult group() {
 		List<TUser> allTUser = userService.getAllTUser();

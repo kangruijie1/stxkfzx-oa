@@ -8,13 +8,6 @@ import xyz.stxkfzx.manager.face.ai.pojo.AiFaceUser;
 public interface SignService
 {
     /**
-     * 搜索人脸库
-     * @param imgBase64 图片编码
-     * @return 识别出的人脸结果集
-     */
-    List<AiFaceUser> searchFaceDb(String imgBase64);
-
-    /**
      * 打卡
      * @param userList 人脸集
      * @param imgBase64 图片编码

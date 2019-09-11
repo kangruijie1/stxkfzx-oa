@@ -3,10 +3,9 @@ package xyz.stxkfzx.manager.user.vo;
 public class TUserVO {
     private Integer userId;
     private String departmentId;
-    private String jobId;
     private String username;
     private String phoneNum;
-    private short status;
+    private String iconUrl;
 
     public TUserVO() {
     }
@@ -16,10 +15,9 @@ public class TUserVO {
         return "TUserVO{" +
                 "userId=" + userId +
                 ", departmentId='" + departmentId + '\'' +
-                ", jobId='" + jobId + '\'' +
                 ", username='" + username + '\'' +
                 ", phoneNum='" + phoneNum + '\'' +
-                ", status=" + status +
+                ", iconUrl='" + iconUrl + '\'' +
                 '}';
     }
 
@@ -39,14 +37,6 @@ public class TUserVO {
         this.departmentId = departmentId;
     }
 
-    public String getJobId() {
-        return jobId;
-    }
-
-    public void setJobId(String jobId) {
-        this.jobId = jobId;
-    }
-
     public String getUsername() {
         return username;
     }
@@ -63,11 +53,11 @@ public class TUserVO {
         this.phoneNum = phoneNum;
     }
 
-    public short getStatus() {
-        return status;
+    public String getIconUrl() {
+        return iconUrl;
     }
 
-    public void setStatus(short status) {
-        this.status = status;
+    public void setIconUrl(String iconUrl) {
+        this.iconUrl = iconUrl;
     }
 }

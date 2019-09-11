@@ -1,4 +1,4 @@
-package xyz.stxkfzx.manager.face.utils;
+package xyz.stxkfzx.manager.common.utils;
 
 import xyz.stxkfzx.manager.common.myException.OAException;
 
@@ -13,10 +13,48 @@ public class GetWeek
     public static SimpleDateFormat format;
     
     static {
-        GetWeek.format = new SimpleDateFormat("yyyy-MM-dd");
+        GetWeek.format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     }
-    
-    public static int getWeekNumber() {
+
+    /**
+     * 时间字符串转为时间戳
+     * @param timeStr
+     * @return
+     */
+    public static Timestamp timeStrConverTimestamp(String timeStr){
+        try {
+            Date date = format.parse(timeStr);
+            Timestamp timestamp = new Timestamp(date.getTime());
+            return timestamp;
+        } catch (ParseException e) {
+            throw new OAException(e.getMessage());
+        }
+    }
+
+    public static String dateAddDay(String startDateStr){
+        try {
+            Date startDate = format.parse(startDateStr);
+            
+            Calendar c = Calendar.getInstance();
+            c.setTime(startDate);
+            c.add(Calendar.DAY_OF_MONTH, 1);
+
+            Date nextDate = c.getTime();
+
+            String nextDateStr = GetWeek.format.format(nextDate);
+            return nextDateStr;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            throw new OAException("该天的下一天失败 " + e.getMessage());
+        }
+    }
+
+
+    /**
+     * 获取今天是第几周
+     * @return
+     */
+    public static int getHowWeek() {
         Date fDate1 = null;
         try {
             fDate1 = GetWeek.format.parse("2019-02-25");
@@ -29,21 +67,47 @@ public class GetWeek
             return ++week;
         } catch (ParseException e) {
             e.printStackTrace();
-            throw new OAException("获取第几周失败");
+            throw new OAException("获取第几周失败" + e.getMessage());
         }
     }
-    
-    public static int getWeekNumber(String today){
+
+    /**
+     * 获取该天是第几周
+     * @return
+     */
+    public static int getHowWeek(String day) {
+        Date fDate1 = null;
+        try {
+            fDate1 = GetWeek.format.parse("2019-02-25");
+            Date datTime = format.parse(day);
+            Timestamp timeStamp = new Timestamp(datTime.getTime());
+            String today = timeStamp.toString().split(" ")[0];
+            Date fDate2 = GetWeek.format.parse(today);
+            long days = (fDate2.getTime() - fDate1.getTime()) / 86400000L;
+            int week = (int)(days / 7L);
+            return ++week;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            throw new OAException("获取第几周失败" + e.getMessage());
+        }
+    }
+
+    /**
+     * 获取该天是周几
+     * @param day
+     * @return
+     */
+    public static int getWeekNumber(String day){
         try {
             Date fDate1 = GetWeek.format.parse("2019-02-25");
             Date fDate2 = null;
-            fDate2 = GetWeek.format.parse(today);
+            fDate2 = GetWeek.format.parse(day);
             long days = (fDate2.getTime() - fDate1.getTime()) / 86400000L;
             int week = (int)(days % 7L);
             return (week % 7 == 0) ? 1 : (week % 7 + 1);
         } catch (ParseException e) {
             e.printStackTrace();
-            throw new OAException("获取第几周失败");
+            throw new OAException("获取该天是周几失败" + e.getMessage());
         }
     }
     
@@ -68,7 +132,7 @@ public class GetWeek
             return list;
         } catch (ParseException e) {
             e.printStackTrace();
-            throw new OAException("获取次周开始和结束时间失败");
+            throw new OAException("获取次周开始和结束时间失败" + e.getMessage());
         }
     }
     
@@ -111,7 +175,7 @@ public class GetWeek
             return a +1;
         } catch (ParseException e) {
             e.printStackTrace();
-            throw new OAException("获取日期间隔失败");
+            throw new OAException("获取日期间隔失败" + e.getMessage());
         }
     }
 }

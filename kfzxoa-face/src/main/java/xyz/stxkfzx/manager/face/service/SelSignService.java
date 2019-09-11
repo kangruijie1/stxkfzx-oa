@@ -7,13 +7,28 @@ import xyz.stxkfzx.manager.user.pojo.TUser;
 
 public interface SelSignService
 {
-    List<SignItemResult> selDepartmentSignItem(int week, String group_id);
-
+    /**
+     * 查询用户当天签到记录
+     * @param username 用户名
+     * @return 签到结果集
+     */
     List<SignItemResult> selUserTodaySignItem(String username);
 
+    /**
+     * 查询用户周签到记录
+     * @param username 用户名
+     * @param week 第几周
+     * @return 签到结果集
+     */
     List<SignItemResult> selUserWeekSignItem(String username, int week);
-    
-    List<Map<String, String>> exportInfo(int week, String group_id);
-    
-    void groupUsers(String group_id);
+
+
+    /**
+     * 查询部门签到记录
+     * @param startTime
+     * @param endTime
+     * @param departmentId
+     * @return
+     */
+    List<SignItemResult> selDepartmentSignItem(String startTime, String endTime, String departmentId);
 }

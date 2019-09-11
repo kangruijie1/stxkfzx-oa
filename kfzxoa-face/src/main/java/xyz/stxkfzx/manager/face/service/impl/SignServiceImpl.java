@@ -9,14 +9,11 @@ import xyz.stxkfzx.manager.common.enums.SignEnum;
 import xyz.stxkfzx.manager.common.enums.WorkingEnum;
 import xyz.stxkfzx.manager.common.myException.OAException;
 import xyz.stxkfzx.manager.common.pojo.FaceResult;
-import xyz.stxkfzx.manager.face.ai.pojo.AiSearchBase;
+import xyz.stxkfzx.manager.common.utils.GetWeek;
 import xyz.stxkfzx.manager.face.ai.pojo.AiFaceUser;
-import xyz.stxkfzx.manager.face.ai.pojo.AiFaceUserList;
-import xyz.stxkfzx.manager.face.enums.FaceExceptionEnum;
 import xyz.stxkfzx.manager.face.enums.ImgEnum;
 import xyz.stxkfzx.manager.face.pojo.TSignItemImg;
 import xyz.stxkfzx.manager.face.pojo.TSignItemNew;
-import xyz.stxkfzx.manager.face.request.ReqSearchFaceDb;
 import xyz.stxkfzx.manager.face.service.*;
 import org.springframework.stereotype.*;
 
@@ -25,7 +22,6 @@ import xyz.stxkfzx.manager.face.mapper.*;
 
 import java.util.*;
 
-import xyz.stxkfzx.manager.face.utils.*;
 import xyz.stxkfzx.manager.user.pojo.TUser;
 import xyz.stxkfzx.manager.user.service.UserService;
 
@@ -38,35 +34,6 @@ public class SignServiceImpl implements SignService {
     private SignItemMapper signItemMapper;
     @Autowired
     private SignItemImgMapper signItemImgMapper;
-    @Autowired
-    ReqSearchFaceDb reqSearchFaceDb;
-
-    @Override
-    public List<AiFaceUser> searchFaceDb(final String imgBase64) {
-        List<AiFaceUser> resultList = new ArrayList<AiFaceUser>();
-
-        // 远程搜索人脸库
-        reqSearchFaceDb.setImgParm(imgBase64);
-        String resultStr = reqSearchFaceDb.req();
-
-        //转换结果集
-        AiSearchBase searchResult = JsonUtils.jsonToPojo(resultStr, AiSearchBase.class);
-
-        // 未检测到人脸，抛出异常
-        if (searchResult.getError_code() == FaceExceptionEnum.NOT_CHECK_FACE.getErrorCode()) {
-            throw new OAException(FaceExceptionEnum.NOT_CHECK_FACE.getErrorMsg());
-        }
-
-        // 返回结果中的人脸
-        if (searchResult.getResult() != null) {
-            List<AiFaceUserList> face_list = searchResult.getResult().getFace_list();
-            for (AiFaceUserList face : face_list) {
-                List<AiFaceUser> aiFaceUserList = face.getUser_list();
-                resultList.addAll(aiFaceUserList);
-            }
-        }
-        return resultList;
-    }
 
     @Override
     public FaceResult sign(List<AiFaceUser> userList, String imgBase64) {

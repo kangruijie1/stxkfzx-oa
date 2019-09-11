@@ -6,18 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
+import xyz.stxkfzx.manager.common.utils.GetWeek;
+
+import java.sql.Timestamp;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+//@SpringBootTest
 public class KfzxoaCommonApplicationTests {
 
-    @Autowired
-    RedisTemplate redisTemplate;
-
     @Test
-    public void test() {
-
-        redisTemplate.hasKey("6");
+    public void testGetWeek() {
+        Timestamp timestamp = GetWeek.timeStrConverTimestamp("2019-07-11 19:34:54");
+        System.out.println(timestamp.toString());
     }
 
 }
